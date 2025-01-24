@@ -11,6 +11,7 @@
   - [1.2. Mongo-Shell (mongosh) Commands](#12-mongo-shell-mongosh-commands)
 - [2. Neo4J - Graphdatenbank](#2-neo4j---graphdatenbank)
   - [2.1. Download](#21-download)
+    - [2.1.1. Registration](#211-registration)
   - [2.2. Desktop Activation Key](#22-desktop-activation-key)
   - [2.3. User Interface](#23-user-interface)
 - [3. Aufgabe - Installation u. Softwarevoraussetzungen / Tools](#3-aufgabe---installation-u-softwarevoraussetzungen--tools)
@@ -59,7 +60,7 @@
 - Die Shell fungiert als Befehlszeilen-Client des MongoDB-Servers.
 
 - Shell starten
-  - `C:\>mongosh\mongosh.exe`
+  - `C:\>mongosh.exe`
 - Datenbanken anzeigen
   - `test>show dbs`
 - Shell beenden
@@ -71,14 +72,18 @@
 
 # 2. Neo4J - Graphdatenbank
 
-Neo4j ist eine in Java implementierte** Open-Source-Graphdatenbank**.
-Eine Graphdatenbank ist eine Datenbank, die Graphen benutzt, um stark vernetzte Informationen darzustellen und abzuspeichern.
+Neo4j ist eine in Java implementierte **Open-Source-Graphdatenbank**.
+Eine **Graphdatenbank** ist eine Datenbank, die Graphen benutzt, um stark vernetzte Informationen darzustellen und abzuspeichern.
 
 ![Neo4j](./x_gitres/neo4j-logo.png)
 
 ## 2.1. Download
 
 ![Download](./x_gitres/neo4-download.png)
+
+### 2.1.1. Registration
+
+![Get Started Now](./x_gitres/neo4-desktop-get-started-now.png)
 
 [Download Neo4j Desktop User Interface Guide](https://neo4j.com/download/?ref=developer-neo4j-desktop)
 

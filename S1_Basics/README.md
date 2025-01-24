@@ -95,7 +95,7 @@
 - Horizontal Skalierung
   - Datenbank verteilen auf mehrere Maschinen (Datencenter)
   - Rechnerverbund ist bei ACID problembehaftet
-  - ![Vertikale Skalierung](./x_gitres/nosql-sql-scaling-vertical.png)
+  - ![Vertikale Skalierung](./x_gitres/nosql-sql-scaling-horizontal.png)
 
 ## 1.5. Konzepte zur Datenverteilung
 
