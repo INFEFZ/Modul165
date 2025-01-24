@@ -2,7 +2,7 @@
 | ------------- | ------------------------------- | -------------------------------------- |
 | **Modul 165** | **NoSQL-Datenbanken einsetzen** | ![IPSO Logo](./x_gitres/ipso_logo.png) |
 
-- [1. Prüfung - Projektarbeit "Ski-Service Management"](#1-prüfung---projektarbeit-ski-service-management)
+- [1. Prüfung - Projektarbeit "Ski-Service Auftragsverwaltung"](#1-prüfung---projektarbeit-ski-service-auftragsverwaltung)
   - [1.1. Organisation](#11-organisation)
   - [1.2. Ausgangssituation](#12-ausgangssituation)
   - [1.3. Allgemeine Anforderungen](#13-allgemeine-anforderungen)
@@ -15,7 +15,7 @@
 
 </br>
 
-# 1. Prüfung - Projektarbeit "Ski-Service Management"
+# 1. Prüfung - Projektarbeit "Ski-Service Auftragsverwaltung"
 
 ## 1.1. Organisation
 
