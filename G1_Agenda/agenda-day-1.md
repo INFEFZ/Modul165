@@ -40,7 +40,7 @@
 
 - **[CAP-Theorem](../S2_CAP/README.md)**
   - Eigenschaften des CAP-Theorems
-  - Base (Basically Available, Soft State, Eventual Consistency)
+  - BASE (Basically Available, Soft State, Eventual Consistency)
   - Übungsaufgaben
 
 ---

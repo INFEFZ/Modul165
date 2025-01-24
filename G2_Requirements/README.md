@@ -79,6 +79,7 @@ Eine Graphdatenbank ist eine Datenbank, die Graphen benutzt, um stark vernetzte 
 ## 2.1. Download
 
 ![Download](./x_gitres/neo4-download.png)
+
 [Download Neo4j Desktop User Interface Guide](https://neo4j.com/download/?ref=developer-neo4j-desktop)
 
 ## 2.2. Desktop Activation Key
