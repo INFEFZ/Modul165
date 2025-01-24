@@ -21,7 +21,8 @@
   - [1.9. BSON](#19-bson)
   - [1.10. Gesamtübersicht](#110-gesamtübersicht)
 - [2. Aufgaben](#2-aufgaben)
-  - [2.1. Get Started with Altlas](#21-get-started-with-altlas)
+  - [2.1. MongoDB Shell Einführung](#21-mongodb-shell-einführung)
+  - [2.2. Get Started with Altlas](#22-get-started-with-altlas)
 
 ---
 
@@ -245,7 +246,31 @@ Beim Referencing werden Daten in separaten Dokumenten gespeichert und durch Refe
 
 # 2. Aufgaben
 
-## 2.1. Get Started with Altlas
+## 2.1. MongoDB Shell Einführung
+
+| **Vorgabe**             | **Beschreibung**                                              |
+| ----------------------- | ------------------------------------------------------------- |
+| **Lernziele**           | Kennt einfache Basiselemente einer MongoDB Datenbank          |
+|                         | Kennt die Möglichkeiten Datenbanken und Collections anzulegen |
+|                         | Kennt die einfache Abfragebefehle                             |
+| **Sozialform**          | Einzelarbeit                                                  |
+| **Auftrag**             | siehe unten                                                   |
+| **Hilfsmittel**         | [Internet](https://www.mongodb.com/docs/manual/crud/)         |
+| **Erwartete Resultate** |                                                               |
+| **Zeitbedarf**          | 30 min                                                        |
+| **Lösungselmente**      | Markdown Dokument                                             |
+
+MongoDB stellt für die CURD-Befehle entsprechende Methoden (Operations) zur Verfügung.
+Arbeite im nachfolgenden Tutorial [Run Commands](https://www.mongodb.com/docs/mongodb-shell/run-commands/) die folgenden Kapitel durch:
+
+- **Run Commands**
+- **Perform CRUD Operations**
+
+[Run Commands](https://www.mongodb.com/docs/mongodb-shell/run-commands/)
+
+---
+
+## 2.2. Get Started with Altlas
 
 | Vorgabe             | Beschreibung                                                |
 | ------------------- | ----------------------------------------------------------- |
