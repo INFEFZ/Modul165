@@ -17,7 +17,7 @@
   - [1.7. Motivation](#17-motivation)
     - [1.7.1. Skalierbarkeit](#171-skalierbarkeit)
     - [1.7.2. Flexible Datenstrukturen](#172-flexible-datenstrukturen)
-    - [1.7.3. Bewältigung großer Datenmengen (Big Data)](#173-bewältigung-großer-datenmengen-big-data)
+    - [1.7.3. Bewältigung grosser Datenmengen (Big Data)](#173-bewältigung-grosser-datenmengen-big-data)
     - [1.7.4. Verteilte und cloudbasierte Architekturen](#174-verteilte-und-cloudbasierte-architekturen)
 - [2. Aufgaben](#2-aufgaben)
   - [2.1. Recap SQL-Datenbanken - Lernangebot](#21-recap-sql-datenbanken---lernangebot)
@@ -134,7 +134,7 @@ NoSQL-Datenbanken eignen sich besonders gut für **moderne, skalierbare Anwendun
 - Limitierungen relationaler Datenbanken:
   - Relationale Datenbanken skalieren hauptsächlich vertikal, d. h. durch leistungsfähigere Hardware. Dies kann teuer sein und hat physische Grenzen.
 - Lösung durch NoSQL:
-  - NoSQL-Datenbanken sind von Grund auf für horizontale Skalierung ausgelegt, sodass sie auf mehrere Server verteilt werden können. Diese verteilte Architektur ermöglicht es, große Datenmengen effizient zu verwalten.
+  - NoSQL-Datenbanken sind von Grund auf für horizontale Skalierung ausgelegt, sodass sie auf mehrere Server verteilt werden können. Diese verteilte Architektur ermöglicht es, grosse Datenmengen effizient zu verwalten.
 
 ### 1.7.2. Flexible Datenstrukturen
 
@@ -143,17 +143,17 @@ NoSQL-Datenbanken eignen sich besonders gut für **moderne, skalierbare Anwendun
 - Vorteile von NoSQL:
   - NoSQL-Datenbanken unterstützen flexible und schemalose Datenmodelle, wodurch sie ideal für Anwendungen sind, bei denen sich die Datenstruktur häufig ändert oder nicht von Anfang an bekannt ist.
 
-### 1.7.3. Bewältigung großer Datenmengen (Big Data)
+### 1.7.3. Bewältigung grosser Datenmengen (Big Data)
 
 - Traditionelle Ansätze:
   - SQL-Datenbanken können Schwierigkeiten haben, mit der exponentiell wachsenden Datenmenge moderner Anwendungen Schritt zu halten.
 - NoSQL-Lösung:
-  - NoSQL-Datenbanken sind für die Verarbeitung von Big Data optimiert und bieten Mechanismen zur effizienten Speicherung und Abfrage großer Datenmengen.
+  - NoSQL-Datenbanken sind für die Verarbeitung von Big Data optimiert und bieten Mechanismen zur effizienten Speicherung und Abfrage grosser Datenmengen.
 
 ### 1.7.4. Verteilte und cloudbasierte Architekturen
 
 - Relationale Einschränkungen:
-  - Relationale Datenbanken wurden ursprünglich für einzelne, zentrale Systeme entwickelt. In einer Cloud- oder verteilten Umgebung können sie an ihre Grenzen stoßen.
+  - Relationale Datenbanken wurden ursprünglich für einzelne, zentrale Systeme entwickelt. In einer Cloud- oder verteilten Umgebung können sie an ihre Grenzen stossen.
 - NoSQL-Vorteil:
   - NoSQL-Datenbanken sind oft von Grund auf für verteilte Architekturen konzipiert. Sie ermöglichen einfache Replikation, hohe Verfügbarkeit und globale Datenzugriffe.
 
