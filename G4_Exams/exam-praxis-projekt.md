@@ -21,7 +21,7 @@
 
 |                     |                                    |
 | ------------------- | ---------------------------------- |
-| **Lernziele**       | LBV 165 -1, Gewichtung 100%        |
+| **Lernziele**       | LBV 165 -1, Gewichtung 60%         |
 | **Sozialform**      | Einzelarbeit                       |
 | **Auftrag**         | siehe unten                        |
 | **Hilfsmittel**     | Internet                           |
