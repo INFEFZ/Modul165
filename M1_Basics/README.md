@@ -260,7 +260,7 @@ Beim Referencing werden Daten in separaten Dokumenten gespeichert und durch Refe
 | **Zeitbedarf**          | 30 min                                                        |
 | **Lösungselmente**      | Markdown Dokument                                             |
 
-MongoDB stellt für die CURD-Befehle entsprechende Methoden (Operations) zur Verfügung.
+MongoDB stellt für die **CURD-Befehle** entsprechende **Methoden** (Operations) zur Verfügung.
 Arbeite im nachfolgenden Tutorial [Run Commands](https://www.mongodb.com/docs/mongodb-shell/run-commands/) die folgenden Kapitel durch:
 
 - **Run Commands**
@@ -272,8 +272,8 @@ Arbeite im nachfolgenden Tutorial [Run Commands](https://www.mongodb.com/docs/mo
 
 ## 2.2. Get Started with Altlas
 
-| Vorgabe             | Beschreibung                                                |
-| ------------------- | ----------------------------------------------------------- |
+| **Vorgabe**         | **Beschreibung**                                            |
+| :------------------ | :---------------------------------------------------------- |
 | Lernziele           | Können einen Atlas-Cluster Zugang einrichten                |
 |                     | Können den Zugriff zum Cluster von lokalen Tools einrichten |
 |                     | Können in der MongoDB Shell Befehle ausführen               |
@@ -284,12 +284,12 @@ Arbeite im nachfolgenden Tutorial [Run Commands](https://www.mongodb.com/docs/mo
 | Zeitbedarf          | 60 min                                                      |
 | Lösungselmente      | Atlas Account eingerichtet, Verbindungszeichenfolge         |
 
-MongoDB Atlas bietet eine einfache Möglichkeit, Ihre Daten in der Cloud zu hosten und zu verwalten.
+**MongoDB Atlas** bietet eine einfache Möglichkeit, Ihre Daten in der Cloud zu hosten und zu verwalten.
 
 **Aufgabe 1:**
 
 - Der nachfolgenden Link führt zu einem Tutorial [Get Stared with Atlas](https://www.mongodb.com/docs/atlas/getting-started).
-- In diesem Tutorial kann ein Atlas-Clusters (free) erstellt und mit insgesamt 7 Schritten eingerichtet werden.
+- In diesem Tutorial kann ein **Atlas-Clusters** (free) erstellt und mit insgesamt 7 Schritten eingerichtet werden.
 - Arbeite dieses Tutorial komplett bis zum Schritt 7 durch und stelle sicher, dass deine Zugangsdaten nicht verloren bzw. vergessen gehen.
 
 Links

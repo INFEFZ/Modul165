@@ -165,7 +165,7 @@ NoSQL-Datenbanken eignen sich besonders gut für **moderne, skalierbare Anwendun
 
 ## 2.1. Recap SQL-Datenbanken - Lernangebot
 
-| Vorgabe             | Beschreibung                                                  |
+| **Vorgabe**         | **Beschreibung**                                              |
 | :------------------ | :------------------------------------------------------------ |
 | Lernziele           | Sie können eine Datenbasis normalisieren (3.NF)               |
 |                     | Sie können ein normalisiertes Datenmodell grafisch darstellen |

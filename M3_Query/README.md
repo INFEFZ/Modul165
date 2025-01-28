@@ -255,11 +255,11 @@ Aufgabe 5
 
 ## 3.2. MongoDB Vergleichsoperatoren
 
-| Vorgabe             | Beschreibung                                                                   |
-| ------------------- | ------------------------------------------------------------------------------ |
-| Lernziele           | Kennt einfache Basiselemente einer MongoDB Datenbank                           |
-|                     | Kennt die Möglichkeiten Datenbanken und Collections anzulegen                  |
-|                     | Kennt die einfache Abfragebefehle                                              |
+| **Vorgabe**         | **Beschreibung**                                                               |
+| :------------------ | :----------------------------------------------------------------------------- |
+| Lernziele           | Kennt einfache **Basiselemente** einer MongoDB Datenbank                       |
+|                     | Kennt die Möglichkeiten Datenbanken und **Collections** anzulegen              |
+|                     | Kennt die einfache **Abfragebefehle**                                          |
 | Sozialform          | Gruppenarbeit                                                                  |
 | Auftrag             | siehe unten                                                                    |
 | Hilfsmittel         | [Internet](https://www.mongodb.com/docs/manual/reference/operator/projection/) |
@@ -267,17 +267,17 @@ Aufgabe 5
 | Zeitbedarf          | 90 min                                                                         |
 | Lösungselmente      | Markdown Dokument                                                              |
 
-MongoDB stellt für die Datenverarbeitung eine umfangreiche Sammlung von Methoden (Operations) zur Verfügung.
-Recherchiere die der Gruppe zugeteilten Methoden und erstelle eine kurze Befehlsreferenz mit geeigneten Anwendungsbeispielen in einem Markdown Dokument.
+**MongoDB** stellt für die Datenverarbeitung eine umfangreiche Sammlung von **Methoden** (Operations) zur Verfügung.
+Recherchiere die der Gruppe zugeteilten Methoden und erstelle eine kurze **Befehlsreferenz** mit geeigneten Anwendungsbeispielen in einem Markdown Dokument.
 
-Gruppe 1 - Vergleichs- und Logische Operatoren
+**Gruppe 1 - Vergleichs- und Logische Operatoren:**
 
 - <https://www.mongodb.com/docs/manual/reference/operator/query-comparison/>
 - <https://www.mongodb.com/docs/manual/reference/operator/query-logical/>
 - $eq, $gt, $gte, usw.
 - $and, $not, $nor, usw
   
-Gruppe 2 - Element- und Evaluationsoperatoren
+**Gruppe 2 - Element- und Evaluationsoperatoren:**
 
 - <https://www.mongodb.com/docs/manual/reference/operator/query-element/>
 - <https://www.mongodb.com/docs/manual/reference/operator/query-evaluation/>
@@ -288,14 +288,14 @@ Gruppe 2 - Element- und Evaluationsoperatoren
 - $mod
 - $regex
 
-Gruppe 3 - Array-Operatoren
+**Gruppe 3 - Array-Operatoren:**
 
 - <https://www.mongodb.com/docs/manual/reference/operator/query-array/>
 - $all
 - $elemMatch
 - $size
 
-Gruppe 4 - Projektions-Operatoren
+**Gruppe 4 - Projektions-Operatoren:**
 
 - <https://www.mongodb.com/docs/manual/reference/operator/projection/>
 - $(projection)
@@ -306,8 +306,8 @@ Gruppe 4 - Projektions-Operatoren
 
 ## 3.3. MongoDB Update Operatoren
 
-| Vorgabe             | Beschreibung                                                  |
-| ------------------- | ------------------------------------------------------------- |
+| **Vorgabe**         | **Beschreibung**                                              |
+| :------------------ | :------------------------------------------------------------ |
 | Lernziele           | Kennt einfache Basiselemente einer MongoDB Datenbank          |
 |                     | Kennt die Möglichkeiten Datenbanken und Collections anzulegen |
 |                     | Kennt die einfache Abfragebefehle                             |
@@ -318,10 +318,10 @@ Gruppe 4 - Projektions-Operatoren
 | Zeitbedarf          | 60 min                                                        |
 | Lösungselmente      | Markdown Dokument                                             |
 
-MongoDB stellt für die CURD-Befehle entsprechende Methoden (Operations) zur Verfügung.
+**MongoDB** stellt für die **CURD-Befehle** entsprechende **Methoden** (Operations) zur Verfügung.
 Recherchiere die der Gruppe zugeteilten Methoden und erstelle eine kurze Befehlsreferenz mit geeigneten Anwendungsbeispielen in einem Markdown Dokument.
 
-Gruppe 1 - Update Operatoren
+**Gruppe 1 - Update Operatoren:**
 
 - $currentDate
 - $inc
@@ -333,7 +333,7 @@ Gruppe 1 - Update Operatoren
 - $setOnInsert
 - $unset
 
-Gruppe 2 - Array Update Operatoren, Teil 1
+**Gruppe 2 - Array Update Operatoren, Teil 1:**
 
 - $
 - $[]
@@ -343,7 +343,7 @@ Gruppe 2 - Array Update Operatoren, Teil 1
 - $pull
 - $push
 
-Gruppe 3 - Array Update Operatoren Teil 2
+**Gruppe 3 - Array Update Operatoren Teil 2:**
 
 - $pushAll
 - $each
@@ -355,36 +355,36 @@ Gruppe 3 - Array Update Operatoren Teil 2
 
 ## 3.4. Daten abfragen SpaceX
 
-| Vorgabe             | Beschreibung                                                         |
-| ------------------- | -------------------------------------------------------------------- |
-| Lernziele           | Kennen die Befehle um Daten einzufügen                               |
-|                     | Kennen die Befehle um einfache Abfragen einer Collection umzusetzen  |
-| Sozialform          | Einzelarbeit                                                         |
-| Auftrag             | siehe unten                                                          |
-| Hilfsmittel         | [Internet](https://www.mongodb.com/docs/manual/crud/)                |
-| Erwartete Resultate |                                                                      |
-| Zeitbedarf          | 50 min                                                               |
-| Lösungselmente      | Vollständige Skriptdatei mit sämtlichen Lösungen der Abfrageaufgaben |
+| **Vorgabe**         | **Beschreibung**                                                        |
+| :------------------ | :---------------------------------------------------------------------- |
+| Lernziele           | Kennen die Befehle um **Daten einzufügen**                              |
+|                     | Kennen die Befehle um einfache Abfragen einer **Collection** umzusetzen |
+| Sozialform          | Einzelarbeit                                                            |
+| Auftrag             | siehe unten                                                             |
+| Hilfsmittel         | [Internet](https://www.mongodb.com/docs/manual/crud/)                   |
+| Erwartete Resultate |                                                                         |
+| Zeitbedarf          | 50 min                                                                  |
+| Lösungselmente      | Vollständige Skriptdatei mit sämtlichen Lösungen der Abfrageaufgaben    |
 
 Voraussetzung / Datenbasis
 
 - In der Datei [launches.json](./x_gitres/launches.json) findest du die Raketenstarts von SpaceX.
 - Importiere diese JSON Datei ein die Datenbank(SpaceX) und Kollektion (launches).
 
-Aufgabe 1
+**Aufgabe 1:**
 
 - Wann hat der Raketenstart mit dem Namen (`name`) "Trailblazer" stattgefunden (`date_utc`)?
 
-Aufgabe 2
+**Aufgabe 2:**
 
 - Gebe den ersten Raketenstart aus dem Jahr (`date_year`) 2008 aus.
 - Bitte beachte, dass du hierzu nach der Spalte **date_utc** sortieren musst
   
-Aufgabe 3
+**Aufgabe 3:**
 
 - Wie viele Raketenstarts haben im Jahr (`date_year`) 2019 und 2020 insgesamt stattgefunden?
 
-Aufgabe 4
+**Aufgabe 4:**
 
 - Hole dir den Namen (`name`) und das Datum (`date_utc`) der Mission, deren Name mit P beginnt.
   - Wie heisst diese?
@@ -395,8 +395,8 @@ Aufgabe 4
 
 ## 3.5. Daten abfragen (Restaurants)
 
-| Vorgabe             | Beschreibung                                                         |
-| ------------------- | -------------------------------------------------------------------- |
+| **Vorgabe**         | **Beschreibung**                                                     |
+| :------------------ | :------------------------------------------------------------------- |
 | Lernziele           | Kennen die Befehle um Daten einzufügen                               |
 |                     | Kennen die Befehle um einfache Abfragen einer Collection umzusetzen  |
 | Sozialform          | Einzelarbeit                                                         |
@@ -406,17 +406,17 @@ Aufgabe 4
 | Zeitbedarf          | 120 min                                                              |
 | Lösungselmente      | Vollständige Skriptdatei mit sämtlichen Lösungen der Abfrageaufgaben |
 
-Voraussetzung / Datenbasis
+**Voraussetzung / Datenbasis:**
 
 - Erstelle eine Datenbank grades und importiere die [restaurants.json](./x_gitres/restaurants.json) in die Collection restaurants.
 
-Import-Befehl
+**Import-Befehl:**
 
 ```console
 mongoimport  --db restaurant --collection restaurants --file restaurants.json
 ```
 
-Schreibe zu nachfolgenden Aufgaben den korrekten Abfragebefehl
+**Schreibe zu nachfolgenden Aufgaben den korrekten Abfragebefehl:**
 
 1. Schreiben Sie eine MongoDB-Abfrage, um alle Dokumente in den Restaurants der Sammlung anzuzeigen.
 2. Schreiben Sie eine MongoDB-Abfrage, um die Felder restaurant_id, name, borough und cuisine für alle Dokumente in der Sammlung restaurant anzuzeigen.
@@ -449,8 +449,8 @@ Schreibe zu nachfolgenden Aufgaben den korrekten Abfragebefehl
 
 ## 3.6. Aggregation Framework (zipcodes)
 
-| Vorgabe             | Beschreibung                                                                                    |
-| ------------------- | ----------------------------------------------------------------------------------------------- |
+| **Vorgabe**         | **Beschreibung**                                                                                |
+| :------------------ | :---------------------------------------------------------------------------------------------- |
 | Lernziele           | Sind in der Lage JSON Dateien in eine MongoDB einzuspielen                                      |
 |                     | Kennen die Möglichkeiten der Aggregationsoperatoren                                             |
 |                     | Können eine Datenabfrage basierend auf einer Aggregationspipeline mit mehreren Stages umsetzen. |
@@ -461,7 +461,7 @@ Schreibe zu nachfolgenden Aufgaben den korrekten Abfragebefehl
 | Zeitbedarf          | 50 min                                                                                          |
 | Lösungselmente      | Vollständige Skriptdatei mit sämtlichen Lösungen der Abfrageaufgaben                            |
 
-Aufgabe 1
+**Aufgabe 1:**
 
 - Erstelle eine Datenbank "zips" und importiere die "zips.json" in die Collection zipcodes, verwenden hierzu das mongoimport Programm.
 - Liste und analysiere mit einer Abfrage find() alle Dokumente in der zipcodes Collection.
@@ -479,7 +479,7 @@ Aufgabe 1
   }
 ```  
 
-Aufgabe 2
+**Aufgabe 2:**
 
 - Schreibe mit dem Aggregationsoperator zu nachfolgenden Aufgaben den korrekten Abfragebefehl.
 - Verwenden dabei die `mongosh` ein.
@@ -491,7 +491,7 @@ Aufgabe 2
 3. Liste die grösste und kleinste Stadt für jeden Bundesstaat.
    - Verwenden dabei die $group, $sort, $project Operatoren
 
-Aufgabe 3
+**Aufgabe 3:**
 
 - Löse die obigen Aufgaben auch in der MongoDB Compass (Aggregation) GUI Anwendung.
 
@@ -499,8 +499,8 @@ Aufgabe 3
 
 ## 3.7. Aggregation Framework ($projection)
 
-| Vorgabe             | Beschreibung                                                                                    |
-| ------------------- | ----------------------------------------------------------------------------------------------- |
+| **Vorgabe**         | **Beschreibung**                                                                                |
+| :------------------ | :---------------------------------------------------------------------------------------------- |
 | Lernziele           | Sind in der Lage JSON Dateien in eine MongoDB einzuspielen                                      |
 |                     | Kennen die Möglichkeiten der Aggregationsoperatoren $match, $project, $add, $size               |
 |                     | Können eine Datenabfrage basierend auf einer Aggregationspipeline mit mehreren Stages umsetzen. |
@@ -511,21 +511,21 @@ Aufgabe 3
 | Zeitbedarf          | 50 min                                                                                          |
 | Lösungselmente      | Vollständige Skriptdatei mit sämtlichen Lösungen der Abfrageaufgaben                            |
 
-Voraussetzung / Datenbasis
+**Voraussetzung / Datenbasis:**
 In der Datei [launches.json](./x_gitres/launches.json) findest du die Raketenstarts von SpaceX. Importiere diese JSON Dabei ein die Datenbank spacex.
 
-Aufgabe 1
+**Aufgabe 1:**
 
 - Wie viele Payloads hat der Raketenstart mit dem Namen "STP-2" (Eigenschaft: name) in den Weltraum geschickt?
 
-Aufgabe 2
+**Aufgabe 2:**
 
 - Wie viel Kraftstoff kann die Rakete aus Aufgabe 1 insgesamt tanken?
 - Tipp:
   - Du findest diese Angabe unter rocket.first_stage.fuel_amount_tons für die erste Stufe und unter rocket.second_stage.fuel_amount_tons für die 2.Stufe der Rakete
   - Diese beiden Werte sollen mit Hilfe des Aggregation-Frameworks aufaddiert werden!
 
-Aufgabe 3
+**Aufgabe 3:**
 
 - SpaceX landet die Raketen ja u.a. auch auf Schiffen
   - Bei wie vielen Raketenstarts waren exakt 5 Schiffe beteiligt?
@@ -540,8 +540,8 @@ Aufgabe 3
 
 ## 3.8. Aggregation Framework ($group)
 
-| Vorgabe             | Beschreibung                                                                                    |
-| ------------------- | ----------------------------------------------------------------------------------------------- |
+| **Vorgabe**         | **Beschreibung**                                                                                |
+| :------------------ | :---------------------------------------------------------------------------------------------- |
 | Lernziele           | Sind in der Lage JSON Dateien in eine MongoDB einzuspielen                                      |
 |                     | Kennen die Möglichkeiten der Aggregationsoperatoren $match, $project, $add, $size               |
 |                     | Können eine Datenabfrage basierend auf einer Aggregationspipeline mit mehreren Stages umsetzen. |
@@ -552,27 +552,27 @@ Aufgabe 3
 | Zeitbedarf          | 50 min                                                                                          |
 | Lösungselmente      | Vollständige Skriptdatei mit sämtlichen Lösungen der Abfrageaufgaben                            |
 
-Voraussetzung / Datenbasis
+**Voraussetzung / Datenbasis:**
 In der Datei [launches.json](./x_gitres/launches.json) findest du die Raketenstarts von SpaceX. Importiere diese JSON Dabei ein die Datenbank spacex.
 
-Aufgabe 1
+**Aufgabe 1:**
 
 - Gruppiere die Raketenstarts nach dem Namen der Rakete (rocket.name), und ermittle, welcher Raketentyp wie oft gestartet wurde
 - Sortiere anschließend die Daten absteigend nach der Anzahl an Starts und gebe die Rakete aus, die am häufigsten gestartet wurde
 
-Aufgabe 2
+**Aufgabe 2:**
 
 - Was war die Mission (Eigenschaft: name), bei der insgesamt die grösste Nutzlast gestartet wurde?
-  - Das Gewicht einer einzelnen Nutzlast findest du unter "payloads.mass_kg"
+  - Das Gewicht einer einzelnen Nutzlast findest du unter "`payloads.mass_kg`"
   - Bitte beachte: Eine Rakete kann mehrere Nutzlasten (z.B. Satelliten) gleichzeitig in den Weltraum starten. In dem Fall müssen die Nutzlasten der einzelnen Satelliten aufsummiert werden!
 
-Aufgabe 3
+**Aufgabe 3:**
 
 - SpaceX landet Raketen ja auch auf Schiffen
   - Frage: Welches Schiff war bei den meisten Raketenstarts beteiligt?
   - Du findest den Namen des Schiffes unter ships.name
 
-Aufgabe 4
+**Aufgabe 4:**
 
 - Für welches Land wurden die meisten Nutzlasten in den Weltraum gestartet?
   - Die Länder einer Nutzlast findest du unter "payloads.nationalities"
@@ -580,9 +580,9 @@ Aufgabe 4
     - Eine Rakete kann mehrere Nutzlasten haben
     - Eine Nutzlast kann theoretisch für mehrere Länder gestartet worden sein
 
-Aufgabe 5
+**Aufgabe 5:**
 
-- Wie viele Kilogramm (payloads.mass_kg) wurden insgesamt für das Land "United States" (bzw. "USA") gestartet?
+- Wie viele Kilogramm (`payloads.mass_kg`) wurden insgesamt für das Land "United States" (bzw. "USA") gestartet?
   - Hinweis:
     - In einer der vorherigen Aufgaben hatten wir "United States" in "USA" umbenannt gehabt
     - Je nachdem, ob du das bei dir gemacht hast oder nicht, heißt das Land bei dir also unterschiedlich
