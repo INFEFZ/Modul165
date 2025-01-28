@@ -188,7 +188,7 @@ Das System wird also **"letztendlich konsistent" (eventually consistent)**, aber
 ## 3.1. Recherche und Analyse des CAP-Theorems und BASE Prinzip
 
 | **Vorgabe**             | **Beschreibung**                                                                                                                                  |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| :---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Lernziele**           | Erwerb eines fundierten Verständnisses der theoretischen Grundlagen </br> verteilter Datenbanksysteme und deren Anwendung in modernen Datenbanken |
 |                         | Schwerpunkt liegt auf dem CAP-Theorem                                                                                                             |
 | **Sozialform**          | Gruppenarbeit                                                                                                                                     |
@@ -198,14 +198,14 @@ Das System wird also **"letztendlich konsistent" (eventually consistent)**, aber
 | **Zeitbedarf**          | 40 min                                                                                                                                            |
 | **Lösungselmente**      | Präsentation mit Zusammenfassung (Markdown)                                                                                                       |
 
-- Erklären Sie in eigenen Worten die drei Eigenschaften des CAP-Theorems (Konsistenz, Verfügbarkeit, Partitionstoleranz).
-- Beschreiben Sie kurz, welche Einschränkung das CAP-Theorem für die Entwicklung verteilte Systeme vorgibt.
-- Nennen Sie ein Beispiel für ein System, das Konsistenz und Partitionstoleranz priorisiert, und eines, das Verfügbarkeit und Partitionstoleranz bevorzugt.
+- Erklären Sie in eigenen Worten die drei Eigenschaften des **CAP-Theorems** (Konsistenz, Verfügbarkeit, Partitionstoleranz).
+- Beschreiben Sie kurz, welche Einschränkung das **CAP-Theorem** für die Entwicklung verteilte Systeme vorgibt.
+- Nennen Sie ein Beispiel für ein System, das **Konsistenz** und **Partitionstoleranz** priorisiert, und eines, das **Verfügbarkeit** und **Partitionstoleranz** bevorzugt.
 
 ## 3.2. Vergleich von ACID und BASE
 
 | **Vorgabe**             | **Beschreibung**                                                   |
-| ----------------------- | ------------------------------------------------------------------ |
+| :---------------------- | ------------------------------------------------------------------ |
 | **Lernziele**           | Sie kennen die beiden Konzepte ACID u. BASE                        |
 |                         | Sie können die wesentliche Unterschiede von ACID u. BASE erläutern |
 | **Sozialform**          | Gruppenarbeit                                                      |

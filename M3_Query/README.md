@@ -73,8 +73,8 @@ db.users.find({ name: { $exists: true }})
 | ----------- | ----------------------------------- | ---------------------------------------------- |
 | **$eq**     | Gleichheit                          | `{ "alter": { $eq: 30 } }`                     |
 | **$ne**     | Ungleichheit                        | `{ "stadt": { $ne: "Berlin" } }`               |
-| **$gt**     | Größer als                          | `{ "alter": { $gt: 30 } }`                     |
-| **$gte**    | Größer oder gleich                  | `{ "alter": { $gte: 30 } }`                    |
+| **$gt**     | Grösser als                         | `{ "alter": { $gt: 30 } }`                     |
+| **$gte**    | Grösser oder gleich                 | `{ "alter": { $gte: 30 } }`                    |
 | **$lt**     | Kleiner als                         | `{ "alter": { $lt: 30 } }`                     |
 | **$lte**    | Kleiner oder gleich                 | `{ "alter": { $lte: 30 } }`                    |
 | **$in**     | In einer Liste von Werten           | `{ "stadt": { $in: ["Berlin", "Hamburg"] } }`  |
@@ -150,7 +150,7 @@ db.kunden.aggregate([
 ]);
 ```
 
-Das folgende Beispiel einer Aggregationspipeline enthält zwei Phasen und gibt die Gesamtbestellmenge von Pizzen mittlerer Größe gruppiert nach Pizzanamen zurück:
+Das folgende Beispiel einer Aggregationspipeline enthält zwei Phasen und gibt die Gesamtbestellmenge von Pizzen mittlerer Grösse gruppiert nach Pizzanamen zurück:
 
 ```javascript
 db.orders.aggregate([
@@ -172,7 +172,7 @@ Der `$lookup`-Operator in MongoDB wird im Aggregation Framework verwendet, um Da
 Dies ermöglicht es, Daten aus verschiedenen Sammlungen zu verknüpfen und zusammenzuführen.
 Der `$lookup`-Operator ist ein mächtiges Tool, um Daten aus mehreren Sammlungen zu kombinieren.
 Er eignet sich besonders gut für 1:n- und n:1-Beziehungen, wie z. B. Kunden und ihre Bestellungen.
-Für komplexere Abfragen oder größere Datenmengen ist eine sorgfältige Indexierung entscheidend.
+Für komplexere Abfragen oder grössere Datenmengen ist eine sorgfältige Indexierung entscheidend.
 
 ![lookup](./x_gitres/mogodb-aggregate-lookup.png)
 
@@ -199,9 +199,9 @@ Parameter:
 ## 2.7. Vorteile
 
 - **Effizienz**
-  - Aggregationen werden direkt auf dem Server ausgeführt und sind für große Datenmengen optimiert.
+  - Aggregationen werden direkt auf dem Server ausgeführt und sind für grosse Datenmengen optimiert.
 - **Flexibilität**
-  - Unterstützung komplexer Datenoperationen, einschließlich Berechnungen, Transformationslogik und Joins.
+  - Unterstützung komplexer Datenoperationen, einschliesslich Berechnungen, Transformationslogik und Joins.
 - **Pipeline-Modell**
   - Klare und modulare Struktur, um komplexe Datenverarbeitungsaufgaben zu zerlegen.
 
@@ -211,19 +211,19 @@ Parameter:
 
 ## 3.1. Erste Schritte mit MongoDB (Uni)
 
-| Vorgabe             | Beschreibung                                                  |
-| ------------------- | ------------------------------------------------------------- |
-| Lernziele           | Kennt einfache Basiselemente einer MongoDB Datenbank          |
-|                     | Kennt die Möglichkeiten Datenbanken und Collections anzulegen |
-|                     | Kennt die einfache Abfragebefehle                             |
-| Sozialform          | Einzelarbeit                                                  |
-| Auftrag             | siehe unten                                                   |
-| Hilfsmittel         | [Internet](https://www.mongodb.com/docs/manual/crud/)         |
-| Erwartete Resultate |                                                               |
-| Zeitbedarf          | 50 min                                                        |
-| Lösungselmente      | Vollständige MongoDB Datei (school.mongodb)                   |
+| **Vorgabe**             | **Beschreibung**                                              |
+| :---------------------- | :------------------------------------------------------------ |
+| **Lernziele**           | Kennt einfache Basiselemente einer MongoDB Datenbank          |
+|                         | Kennt die Möglichkeiten Datenbanken und Collections anzulegen |
+|                         | Kennt die einfache Abfragebefehle                             |
+| **Sozialform**          | Einzelarbeit                                                  |
+| **Auftrag**             | siehe unten                                                   |
+| **Hilfsmittel**         | [Internet](https://www.mongodb.com/docs/manual/crud/)         |
+| **Erwartete Resultate** |                                                               |
+| **Zeitbedarf**          | 50 min                                                        |
+| **Lösungselmente**      | Vollständige MongoDB Datei (school.mongodb)                   |
 
-Aufgabe 1
+**Aufgabe 1:**
 
 - Erstelle in MongoDB eine neue Datenbank `school` und füge in die Collection `students` deine Klassenkammeraden-/innen mit nachfolgenden Attributen ein:
   - firstname
@@ -231,7 +231,7 @@ Aufgabe 1
   - age
   - hobbies (**Bemerkung: sollte ein Array sein**)
 
-Aufgabe 2
+**Aufgabe 2:**
 
 - Erstelle folgende Suchabfragen
   - Suche deinen Eintrag mit Vor- u. Nachname
@@ -239,15 +239,15 @@ Aufgabe 2
   - Suche alle Schulkollegen-/innen deren Alter z.B. über 20 liegt
   - Erstelle weitere Suchabfrage nach freier Wahl
 
-Aufgabe 3
+**Aufgabe 3:**
 
 - Überlege wie die students Einträge zusätzlich mit einer Adresse bestehend aus (`street`, `zip` und `city`) ergänzt werden kann.
 
-Aufgabe 4
+**Aufgabe 4:**
 
 - Überlege wie students mit einem bestimmten Hobby z.B. `Biken` gefunden werden.
 
-Aufgabe 5
+**Aufgabe 5:**
 
 - Überlege wie students mit an einer bestimmten Adresse z.B. `zip = 5000` gefunden werden.
 
@@ -255,17 +255,17 @@ Aufgabe 5
 
 ## 3.2. MongoDB Vergleichsoperatoren
 
-| **Vorgabe**         | **Beschreibung**                                                               |
-| :------------------ | :----------------------------------------------------------------------------- |
-| Lernziele           | Kennt einfache **Basiselemente** einer MongoDB Datenbank                       |
-|                     | Kennt die Möglichkeiten Datenbanken und **Collections** anzulegen              |
-|                     | Kennt die einfache **Abfragebefehle**                                          |
-| Sozialform          | Gruppenarbeit                                                                  |
-| Auftrag             | siehe unten                                                                    |
-| Hilfsmittel         | [Internet](https://www.mongodb.com/docs/manual/reference/operator/projection/) |
-| Erwartete Resultate |                                                                                |
-| Zeitbedarf          | 90 min                                                                         |
-| Lösungselmente      | Markdown Dokument                                                              |
+| **Vorgabe**             | **Beschreibung**                                                               |
+| :---------------------- | :----------------------------------------------------------------------------- |
+| **Lernziele**           | Kennt einfache **Basiselemente** einer MongoDB Datenbank                       |
+|                         | Kennt die Möglichkeiten Datenbanken und **Collections** anzulegen              |
+|                         | Kennt die einfache **Abfragebefehle**                                          |
+| **Sozialform**          | Gruppenarbeit                                                                  |
+| **Auftrag**             | siehe unten                                                                    |
+| **Hilfsmittel**         | [Internet](https://www.mongodb.com/docs/manual/reference/operator/projection/) |
+| **Erwartete Resultate** |                                                                                |
+| **Zeitbedarf**          | 90 min                                                                         |
+| **Lösungselmente**      | Markdown Dokument                                                              |
 
 **MongoDB** stellt für die Datenverarbeitung eine umfangreiche Sammlung von **Methoden** (Operations) zur Verfügung.
 Recherchiere die der Gruppe zugeteilten Methoden und erstelle eine kurze **Befehlsreferenz** mit geeigneten Anwendungsbeispielen in einem Markdown Dokument.
@@ -306,17 +306,17 @@ Recherchiere die der Gruppe zugeteilten Methoden und erstelle eine kurze **Befeh
 
 ## 3.3. MongoDB Update Operatoren
 
-| **Vorgabe**         | **Beschreibung**                                              |
-| :------------------ | :------------------------------------------------------------ |
-| Lernziele           | Kennt einfache Basiselemente einer MongoDB Datenbank          |
-|                     | Kennt die Möglichkeiten Datenbanken und Collections anzulegen |
-|                     | Kennt die einfache Abfragebefehle                             |
-| Sozialform          | Gruppenarbeit                                                 |
-| Auftrag             | siehe unten                                                   |
-| Hilfsmittel         | [Internet](https://www.mongodb.com/docs/manual/crud/)         |
-| Erwartete Resultate |                                                               |
-| Zeitbedarf          | 60 min                                                        |
-| Lösungselmente      | Markdown Dokument                                             |
+| **Vorgabe**             | **Beschreibung**                                              |
+| :---------------------- | :------------------------------------------------------------ |
+| **Lernziele**           | Kennt einfache Basiselemente einer MongoDB Datenbank          |
+|                         | Kennt die Möglichkeiten Datenbanken und Collections anzulegen |
+|                         | Kennt die einfache Abfragebefehle                             |
+| **Sozialform**          | Gruppenarbeit                                                 |
+| **Auftrag**             | siehe unten                                                   |
+| **Hilfsmittel**         | [Internet](https://www.mongodb.com/docs/manual/crud/)         |
+| **Erwartete Resultate** |                                                               |
+| **Zeitbedarf**          | 60 min                                                        |
+| **Lösungselmente**      | Markdown Dokument                                             |
 
 **MongoDB** stellt für die **CURD-Befehle** entsprechende **Methoden** (Operations) zur Verfügung.
 Recherchiere die der Gruppe zugeteilten Methoden und erstelle eine kurze Befehlsreferenz mit geeigneten Anwendungsbeispielen in einem Markdown Dokument.
@@ -355,16 +355,16 @@ Recherchiere die der Gruppe zugeteilten Methoden und erstelle eine kurze Befehls
 
 ## 3.4. Daten abfragen SpaceX
 
-| **Vorgabe**         | **Beschreibung**                                                        |
-| :------------------ | :---------------------------------------------------------------------- |
-| Lernziele           | Kennen die Befehle um **Daten einzufügen**                              |
-|                     | Kennen die Befehle um einfache Abfragen einer **Collection** umzusetzen |
-| Sozialform          | Einzelarbeit                                                            |
-| Auftrag             | siehe unten                                                             |
-| Hilfsmittel         | [Internet](https://www.mongodb.com/docs/manual/crud/)                   |
-| Erwartete Resultate |                                                                         |
-| Zeitbedarf          | 50 min                                                                  |
-| Lösungselmente      | Vollständige Skriptdatei mit sämtlichen Lösungen der Abfrageaufgaben    |
+| **Vorgabe**             | **Beschreibung**                                                        |
+| :---------------------- | :---------------------------------------------------------------------- |
+| **Lernziele**           | Kennen die Befehle um **Daten einzufügen**                              |
+|                         | Kennen die Befehle um einfache Abfragen einer **Collection** umzusetzen |
+| **Sozialform**          | Einzelarbeit                                                            |
+| **Auftrag**             | siehe unten                                                             |
+| **Hilfsmittel**         | [Internet](https://www.mongodb.com/docs/manual/crud/)                   |
+| **Erwartete Resultate** |                                                                         |
+| **Zeitbedarf**          | 50 min                                                                  |
+| **Lösungselmente**      | Vollständige Skriptdatei mit sämtlichen Lösungen der Abfrageaufgaben    |
 
 Voraussetzung / Datenbasis
 
@@ -395,16 +395,16 @@ Voraussetzung / Datenbasis
 
 ## 3.5. Daten abfragen (Restaurants)
 
-| **Vorgabe**         | **Beschreibung**                                                     |
-| :------------------ | :------------------------------------------------------------------- |
-| Lernziele           | Kennen die Befehle um Daten einzufügen                               |
-|                     | Kennen die Befehle um einfache Abfragen einer Collection umzusetzen  |
-| Sozialform          | Einzelarbeit                                                         |
-| Auftrag             | siehe unten                                                          |
-| Hilfsmittel         | [Internet](https://www.mongodb.com/docs/manual/crud/)                |
-| Erwartete Resultate |                                                                      |
-| Zeitbedarf          | 120 min                                                              |
-| Lösungselmente      | Vollständige Skriptdatei mit sämtlichen Lösungen der Abfrageaufgaben |
+| **Vorgabe**             | **Beschreibung**                                                     |
+| :---------------------- | :------------------------------------------------------------------- |
+| **Lernziele**           | Kennen die Befehle um Daten einzufügen                               |
+|                         | Kennen die Befehle um einfache Abfragen einer Collection umzusetzen  |
+| **Sozialform**          | Einzelarbeit                                                         |
+| **Auftrag**             | siehe unten                                                          |
+| **Hilfsmittel**         | [Internet](https://www.mongodb.com/docs/manual/crud/)                |
+| **Erwartete Resultate** |                                                                      |
+| **Zeitbedarf**          | 120 min                                                              |
+| **Lösungselmente**      | Vollständige Skriptdatei mit sämtlichen Lösungen der Abfrageaufgaben |
 
 **Voraussetzung / Datenbasis:**
 
@@ -436,7 +436,7 @@ mongoimport  --db restaurant --collection restaurants --file restaurants.json
 16. Schreiben Sie eine MongoDB-Abfrage, um die Restaurant-ID, den Namen, den Bezirk und die Küche für die Restaurants zu finden, die zu den Bezirken Staaten Island, Queens, Bronx oder Brooklyn gehören.
 17. Schreiben Sie eine MongoDB-Abfrage, um die Restaurant-ID, den Namen, den Stadtbezirk und die Küche für die Restaurants zu finden, die nicht zu den Stadtbezirken Staaten Island, Queens, Bronx oder Brooklyn gehören.
 18. Schreiben Sie eine MongoDB-Abfrage, um die Restaurant-ID, den Namen, den Bezirk und die Küche für die Restaurants zu finden, die eine Punktzahl (score) von höchstens 10 erreicht haben.
-19. Schreiben Sie eine MongoDB-Abfrage, um die Restaurant-ID, den Namen, den Stadtbezirk und die Küche für die Restaurants zu finden, die Gerichte außer "Amerikanisch" (‘American’) und "Chinesisch" (‘Chinese’) zubereitet haben oder deren Name mit dem Buchstaben "Meer" beginnt.
+19. Schreiben Sie eine MongoDB-Abfrage, um die Restaurant-ID, den Namen, den Stadtbezirk und die Küche für die Restaurants zu finden, die Gerichte ausser "Amerikanisch" (‘American’) und "Chinesisch" (‘Chinese’) zubereitet haben oder deren Name mit dem Buchstaben "Meer" beginnt.
 20. Schreiben Sie eine MongoDB-Abfrage, um die Namen der Restaurants in aufsteigender Reihenfolge zusammen mit allen Spalten anzuordnen.
 21. Schreiben Sie eine MongoDB-Abfrage, um die Namen der Restaurants in absteigender Reihenfolge zusammen mit allen Spalten anzuordnen.
 22. Schreiben Sie eine MongoDB-Abfrage, um den Namen der Küche in aufsteigender Reihenfolge zu ordnen, und für dieselbe Küche sollte der Stadtbezirk in absteigender Reihenfolge sein.
@@ -449,17 +449,17 @@ mongoimport  --db restaurant --collection restaurants --file restaurants.json
 
 ## 3.6. Aggregation Framework (zipcodes)
 
-| **Vorgabe**         | **Beschreibung**                                                                                |
-| :------------------ | :---------------------------------------------------------------------------------------------- |
-| Lernziele           | Sind in der Lage JSON Dateien in eine MongoDB einzuspielen                                      |
-|                     | Kennen die Möglichkeiten der Aggregationsoperatoren                                             |
-|                     | Können eine Datenabfrage basierend auf einer Aggregationspipeline mit mehreren Stages umsetzen. |
-| Sozialform          | Einzelarbeit                                                                                    |
-| Auftrag             | siehe unten                                                                                     |
-| Hilfsmittel         | [Internet](https://www.mongodb.com/docs/manual/crud/)                                           |
-| Erwartete Resultate |                                                                                                 |
-| Zeitbedarf          | 50 min                                                                                          |
-| Lösungselmente      | Vollständige Skriptdatei mit sämtlichen Lösungen der Abfrageaufgaben                            |
+| **Vorgabe**             | **Beschreibung**                                                                                |
+| :---------------------- | :---------------------------------------------------------------------------------------------- |
+| **Lernziele**           | Sind in der Lage JSON Dateien in eine MongoDB einzuspielen                                      |
+|                         | Kennen die Möglichkeiten der Aggregationsoperatoren                                             |
+|                         | Können eine Datenabfrage basierend auf einer Aggregationspipeline mit mehreren Stages umsetzen. |
+| **Sozialform**          | Einzelarbeit                                                                                    |
+| **Auftrag**             | siehe unten                                                                                     |
+| **Hilfsmittel**         | [Internet](https://www.mongodb.com/docs/manual/crud/)                                           |
+| **Erwartete Resultate** |                                                                                                 |
+| **Zeitbedarf**          | 50 min                                                                                          |
+| **Lösungselmente**      | Vollständige Skriptdatei mit sämtlichen Lösungen der Abfrageaufgaben                            |
 
 **Aufgabe 1:**
 
@@ -499,17 +499,17 @@ mongoimport  --db restaurant --collection restaurants --file restaurants.json
 
 ## 3.7. Aggregation Framework ($projection)
 
-| **Vorgabe**         | **Beschreibung**                                                                                |
-| :------------------ | :---------------------------------------------------------------------------------------------- |
-| Lernziele           | Sind in der Lage JSON Dateien in eine MongoDB einzuspielen                                      |
-|                     | Kennen die Möglichkeiten der Aggregationsoperatoren $match, $project, $add, $size               |
-|                     | Können eine Datenabfrage basierend auf einer Aggregationspipeline mit mehreren Stages umsetzen. |
-| Sozialform          | Einzelarbeit                                                                                    |
-| Auftrag             | siehe unten                                                                                     |
-| Hilfsmittel         | [Internet](https://www.mongodb.com/docs/manual/crud/)                                           |
-| Erwartete Resultate |                                                                                                 |
-| Zeitbedarf          | 50 min                                                                                          |
-| Lösungselmente      | Vollständige Skriptdatei mit sämtlichen Lösungen der Abfrageaufgaben                            |
+| **Vorgabe**             | **Beschreibung**                                                                                |
+| :---------------------- | :---------------------------------------------------------------------------------------------- |
+| **Lernziele**           | Sind in der Lage JSON Dateien in eine MongoDB einzuspielen                                      |
+|                         | Kennen die Möglichkeiten der Aggregationsoperatoren $match, $project, $add, $size               |
+|                         | Können eine Datenabfrage basierend auf einer Aggregationspipeline mit mehreren Stages umsetzen. |
+| **Sozialform**          | Einzelarbeit                                                                                    |
+| **Auftrag**             | siehe unten                                                                                     |
+| **Hilfsmittel**         | [Internet](https://www.mongodb.com/docs/manual/crud/)                                           |
+| **Erwartete Resultate** |                                                                                                 |
+| **Zeitbedarf**          | 50 min                                                                                          |
+| **Lösungselmente**      | Vollständige Skriptdatei mit sämtlichen Lösungen der Abfrageaufgaben                            |
 
 **Voraussetzung / Datenbasis:**
 In der Datei [launches.json](./x_gitres/launches.json) findest du die Raketenstarts von SpaceX. Importiere diese JSON Dabei ein die Datenbank spacex.
@@ -540,29 +540,29 @@ In der Datei [launches.json](./x_gitres/launches.json) findest du die Raketensta
 
 ## 3.8. Aggregation Framework ($group)
 
-| **Vorgabe**         | **Beschreibung**                                                                                |
-| :------------------ | :---------------------------------------------------------------------------------------------- |
-| Lernziele           | Sind in der Lage JSON Dateien in eine MongoDB einzuspielen                                      |
-|                     | Kennen die Möglichkeiten der Aggregationsoperatoren $match, $project, $add, $size               |
-|                     | Können eine Datenabfrage basierend auf einer Aggregationspipeline mit mehreren Stages umsetzen. |
-| Sozialform          | Einzelarbeit                                                                                    |
-| Auftrag             | siehe unten                                                                                     |
-| Hilfsmittel         | [Internet](https://www.mongodb.com/docs/manual/crud/)                                           |
-| Erwartete Resultate |                                                                                                 |
-| Zeitbedarf          | 50 min                                                                                          |
-| Lösungselmente      | Vollständige Skriptdatei mit sämtlichen Lösungen der Abfrageaufgaben                            |
+| **Vorgabe**             | **Beschreibung**                                                                                |
+| :---------------------- | :---------------------------------------------------------------------------------------------- |
+| **Lernziele**           | Sind in der Lage JSON Dateien in eine MongoDB einzuspielen                                      |
+|                         | Kennen die Möglichkeiten der Aggregationsoperatoren $match, $project, $add, $size               |
+|                         | Können eine Datenabfrage basierend auf einer Aggregationspipeline mit mehreren Stages umsetzen. |
+| **Sozialform**          | Einzelarbeit                                                                                    |
+| **Auftrag**             | siehe unten                                                                                     |
+| **Hilfsmittel**         | [Internet](https://www.mongodb.com/docs/manual/crud/)                                           |
+| **Erwartete Resultate** |                                                                                                 |
+| **Zeitbedarf**          | 50 min                                                                                          |
+| **Lösungselmente**      | Vollständige Skriptdatei mit sämtlichen Lösungen der Abfrageaufgaben                            |
 
 **Voraussetzung / Datenbasis:**
 In der Datei [launches.json](./x_gitres/launches.json) findest du die Raketenstarts von SpaceX. Importiere diese JSON Dabei ein die Datenbank spacex.
 
 **Aufgabe 1:**
 
-- Gruppiere die Raketenstarts nach dem Namen der Rakete (rocket.name), und ermittle, welcher Raketentyp wie oft gestartet wurde
-- Sortiere anschließend die Daten absteigend nach der Anzahl an Starts und gebe die Rakete aus, die am häufigsten gestartet wurde
+- Gruppiere die Raketenstarts nach dem Namen der Rakete (`rocket.name`), und ermittle, welcher Raketentyp wie oft gestartet wurde
+- Sortiere anschliessend die Daten absteigend nach der Anzahl an Starts und gebe die Rakete aus, die am häufigsten gestartet wurde
 
 **Aufgabe 2:**
 
-- Was war die Mission (Eigenschaft: name), bei der insgesamt die grösste Nutzlast gestartet wurde?
+- Was war die Mission (Eigenschaft: `name`), bei der insgesamt die grösste Nutzlast gestartet wurde?
   - Das Gewicht einer einzelnen Nutzlast findest du unter "`payloads.mass_kg`"
   - Bitte beachte: Eine Rakete kann mehrere Nutzlasten (z.B. Satelliten) gleichzeitig in den Weltraum starten. In dem Fall müssen die Nutzlasten der einzelnen Satelliten aufsummiert werden!
 
@@ -575,7 +575,7 @@ In der Datei [launches.json](./x_gitres/launches.json) findest du die Raketensta
 **Aufgabe 4:**
 
 - Für welches Land wurden die meisten Nutzlasten in den Weltraum gestartet?
-  - Die Länder einer Nutzlast findest du unter "payloads.nationalities"
+  - Die Länder einer Nutzlast findest du unter "`payloads.nationalities`"
   - Bitte beachte:
     - Eine Rakete kann mehrere Nutzlasten haben
     - Eine Nutzlast kann theoretisch für mehrere Länder gestartet worden sein
@@ -585,7 +585,7 @@ In der Datei [launches.json](./x_gitres/launches.json) findest du die Raketensta
 - Wie viele Kilogramm (`payloads.mass_kg`) wurden insgesamt für das Land "United States" (bzw. "USA") gestartet?
   - Hinweis:
     - In einer der vorherigen Aufgaben hatten wir "United States" in "USA" umbenannt gehabt
-    - Je nachdem, ob du das bei dir gemacht hast oder nicht, heißt das Land bei dir also unterschiedlich
+    - Je nachdem, ob du das bei dir gemacht hast oder nicht, heisst das Land bei dir also unterschiedlich
   - Alternativ:
-    - Über db.launches.drop() kannst du die Collection auch komplett entfernen
+    - Über `db.launches.drop()` kannst du die Collection auch komplett entfernen
     - Und dann z.B. über mongoimport neu importieren

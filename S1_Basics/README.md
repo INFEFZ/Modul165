@@ -165,30 +165,30 @@ NoSQL-Datenbanken eignen sich besonders gut für **moderne, skalierbare Anwendun
 
 ## 2.1. Recap SQL-Datenbanken - Lernangebot
 
-| **Vorgabe**         | **Beschreibung**                                              |
-| :------------------ | :------------------------------------------------------------ |
-| Lernziele           | Sie können eine Datenbasis normalisieren (3.NF)               |
-|                     | Sie können ein normalisiertes Datenmodell grafisch darstellen |
-|                     | Sie können ein Datenmodell mit SQL implementieren             |
-| Sozialform          | Einzelarbeit                                                  |
-| Auftrag             | siehe unten                                                   |
-| Hilfsmittel         | Internet                                                      |
-| Erwartete Resultate |                                                               |
-| Zeitbedarf          | 90 min                                                        |
-| Lösungselmente      | SQL-Skriptdateien                                             |
+| **Vorgabe**             | **Beschreibung**                                              |
+| :---------------------- | :------------------------------------------------------------ |
+| **Lernziele**           | Sie können eine Datenbasis normalisieren (3.NF)               |
+|                         | Sie können ein normalisiertes Datenmodell grafisch darstellen |
+|                         | Sie können ein Datenmodell mit SQL implementieren             |
+| **Sozialform**          | Einzelarbeit                                                  |
+| **Auftrag**             | siehe unten                                                   |
+| **Hilfsmittel**         | Internet                                                      |
+| **Erwartete Resultate** |                                                               |
+| **Zeitbedarf**          | 90 min                                                        |
+| **Lösungselmente**      | SQL-Skriptdateien                                             |
 
 Die Tabelle mit den Schulverwaltungsdaten (siehe unten) soll in eine relationale Datenbank (SQL) überführt werden.
 Um Redundanzen auszuschliessen, müssen die Daten bis zur dritten Normalform (3. NF) normalisiert werden.
 
 ![Aufgabe Lernangebot](./x_gitres/task-sql-recap.png)
 
-Voraussetzung
+**Voraussetzung:**
 
 - Excel Anwendung
 - MS SQL Server Installation
 - SQL Server Management Studio
 
-Vorgehen
+**Vorgehen:**
 
 1. Normalisiere die Schulverwaltungsdaten bis zur **3. NF** und stelle diese in Excel dar.
    1. Lösungselement: **Excel-Datei**.
@@ -219,9 +219,9 @@ Vorgehen
 | **Zeitbedarf**          | 90 min                                                                              |
 | **Lösungselmente**      | Präsentation mit Zusammenfassung bzw. Handout (Markdown)                            |
 
-Ermitteln Sie alle wichtigen Informationen über das Ihnen zugeteilte Datenprodukte und erstellen Sie eine Präsentation inkl. Lösungsbeispiel.
+Ermitteln Sie alle **wichtigen Informationen** über das Ihnen zugeteilte Datenprodukte und erstellen Sie eine **Präsentation** inkl. Lösungsbeispiel.
 
-Dabei sollen folgende Punkte untersucht werden:
+**Dabei sollen folgende Punkte untersucht werden:**
 
 - Grundprinzip der Datenstruktur
 - Spezifische Merkmale
@@ -238,7 +238,7 @@ Dabei sollen folgende Punkte untersucht werden:
 - Die Präsentation und die Lösungsbeispiele sind den anderen Klassenkameraden zur Verfügung zu stellen.
 - Dauer der Präsentation ca. 15-20 min
 
-Gruppen:
+**Gruppen:**
 
 - Key-Values Stores
   - Redis (<http://redis.io/>)
