@@ -14,7 +14,7 @@
   - [2.6. $lookup - Aggregation Framework](#26-lookup---aggregation-framework)
   - [2.7. Vorteile](#27-vorteile)
 - [3. Aufgaben](#3-aufgaben)
-  - [3.1. Erste Schritte mit MongoDB (Uni)](#31-erste-schritte-mit-mongodb-uni)
+  - [3.1. Erste Schritte mit MongoDB (school)](#31-erste-schritte-mit-mongodb-school)
   - [3.2. MongoDB Vergleichsoperatoren](#32-mongodb-vergleichsoperatoren)
   - [3.3. MongoDB Update Operatoren](#33-mongodb-update-operatoren)
   - [3.4. Daten abfragen SpaceX](#34-daten-abfragen-spacex)
@@ -209,7 +209,7 @@ Parameter:
 
 # 3. Aufgaben
 
-## 3.1. Erste Schritte mit MongoDB (Uni)
+## 3.1. Erste Schritte mit MongoDB (school)
 
 | **Vorgabe**             | **Beschreibung**                                              |
 | :---------------------- | :------------------------------------------------------------ |
