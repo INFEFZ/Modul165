@@ -370,6 +370,7 @@ Voraussetzung / Datenbasis
 
 - In der Datei [launches.json](./x_gitres/launches.json) findest du die Raketenstarts von SpaceX.
 - Importiere diese JSON Datei ein die Datenbank(SpaceX) und Kollektion (launches).
+- Verwendet hierfür den `mongoimport` Befehle.
 
 **Aufgabe 1:**
 
