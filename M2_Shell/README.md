@@ -65,7 +65,7 @@ db.dropDatabase()
 
 # 2. CRUD-Operationen
 
-![CheatSheet](./Light.pdf)
+[MongoDB CheatSheet](./Light.pdf)
 ![CRUD-Operationen](./x_gitres/mongodb-curd-operations.png)
 
 ## 2.1. Dokument suchen - find(), findOne()
