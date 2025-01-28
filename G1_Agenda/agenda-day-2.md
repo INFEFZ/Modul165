@@ -19,7 +19,7 @@
 ---
 
 - **[MongoDB Query](../M3_Query/README.md)**
-  - Dokumente suchen (find(), findOne())
+  - Dokumente suchen (`find()`, `findOne()`)
   - Suchkriterien (Vergleiche, Eigenschaften prüfen)
   - Komplexe Queries (Stringsuche, Reguläre Ausdrücke)
   - Aggregation Framework

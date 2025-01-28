@@ -249,7 +249,7 @@ Beim Referencing werden Daten in separaten Dokumenten gespeichert und durch Refe
 ## 2.1. MongoDB Shell Einführung
 
 | **Vorgabe**             | **Beschreibung**                                              |
-| ----------------------- | ------------------------------------------------------------- |
+| :---------------------- | :------------------------------------------------------------ |
 | **Lernziele**           | Kennt einfache Basiselemente einer MongoDB Datenbank          |
 |                         | Kennt die Möglichkeiten Datenbanken und Collections anzulegen |
 |                         | Kennt die einfache Abfragebefehle                             |
@@ -265,8 +265,6 @@ Arbeite im nachfolgenden Tutorial [Run Commands](https://www.mongodb.com/docs/mo
 
 - **Run Commands**
 - **Perform CRUD Operations**
-
-[Run Commands](https://www.mongodb.com/docs/mongodb-shell/run-commands/)
 
 ---
 
