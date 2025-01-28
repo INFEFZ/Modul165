@@ -279,7 +279,7 @@ Arbeite im nachfolgenden Tutorial [Run Commands](https://www.mongodb.com/docs/mo
 | Auftrag             | siehe unten                                                 |
 | Hilfsmittel         | Internet                                                    |
 | Erwartete Resultate |                                                             |
-| Zeitbedarf          | 60 min                                                      |
+| Zeitbedarf          | 40 min                                                      |
 | Lösungselmente      | Atlas Account eingerichtet, Verbindungszeichenfolge         |
 
 **MongoDB Atlas** bietet eine einfache Möglichkeit, Ihre Daten in der Cloud zu hosten und zu verwalten.
@@ -296,4 +296,4 @@ Links
 
 **Aufgabe 2:**
 
-- Ermittle die Verbindungsinformation zum Cluster und versuche von deiner Shell (mongosh) einer Verbindung zum Cluster einzurichten.
+- Ermittle die Verbindungsinformation zum Cluster und versuche von der Shell (mongosh) und Compass Anwendung eine Verbindung zum Cluster einzurichten.

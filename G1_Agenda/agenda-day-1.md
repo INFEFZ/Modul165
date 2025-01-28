@@ -57,5 +57,4 @@
   - Grundlagen
   - Datenmodell
   - Übungsaufgaben
-
-  - [mongodb-shell](https://www.mongodb.com/docs/mongodb-shell/)
+  - [Dokumentation mongodb shell](https://www.mongodb.com/docs/mongodb-shell/)

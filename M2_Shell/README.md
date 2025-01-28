@@ -316,7 +316,7 @@ db.users.find().skip(5)
 | **Auftrag**             | siehe unten                                                   |
 | **Hilfsmittel**         | [Internet](https://www.mongodb.com/docs/manual/crud/)         |
 | **Erwartete Resultate** |                                                               |
-| **Zeitbedarf**          | 60 min                                                        |
+| **Zeitbedarf**          | 40 min                                                        |
 | **Lösungselmente**      | Markdown Dokument                                             |
 
 MongoDB stellt für die CURD-Befehle entsprechende Methoden (Operations) zur Verfügung.
@@ -355,7 +355,7 @@ Recherchiere die der Gruppe zugeteilten Methoden und erstelle eine kurze Befehls
 | **Auftrag**             | siehe unten                                                   |
 | **Hilfsmittel**         | [Internet](https://www.mongodb.com/docs/manual/crud/)         |
 | **Erwartete Resultate** |                                                               |
-| **Zeitbedarf**          | 30 min                                                        |
+| **Zeitbedarf**          | 40 min                                                        |
 | **Lösungselmente**      | MongoDB Shell Befehle                                         |
 
 1. Für eine Uni-Vergleichs-Webseite möchten wir alle **Universitäten** in der Schweiz erfassen

@@ -14,7 +14,7 @@
     - [1.3.3. Availability + Partition Tolerance (AP-System)](#133-availability--partition-tolerance-ap-system)
   - [1.4. Beispiele und Trade-offs](#14-beispiele-und-trade-offs)
   - [1.5. Produkte](#15-produkte)
-- [2. Base (Basically Available, Soft State, Eventual Consistency)](#2-base-basically-available-soft-state-eventual-consistency)
+- [2. BASE (Basically Available, Soft State, Eventual Consistency)](#2-base-basically-available-soft-state-eventual-consistency)
   - [2.1. Einführung Base](#21-einführung-base)
   - [2.2. Basically Available](#22-basically-available)
   - [2.3. Soft State](#23-soft-state)
@@ -42,7 +42,7 @@
 
 ### 1.2.1. Consistency (Konsistenz)
 
-Alle Knoten im System sehen dieselben Daten zu jedem Zeitpunkt. Das bedeutet, dass nach einer Schreiboperation sofort alle Leseanfragen den aktuellen Zustand der Daten zurückgeben. Die Knoten sind also **ständig synchronisiert**.
+Alle Knoten im System sehen **dieselben Daten zu jedem Zeitpunkt**. Das bedeutet, dass nach einer Schreiboperation sofort alle Leseanfragen den aktuellen Zustand der Daten zurückgeben. Die Knoten sind also **ständig synchronisiert**.
 
 **Beispiel:** Nach dem Hinzufügen eines neuen Eintrags in einer Datenbank kann dieser von allen Knoten sofort gelesen werden.
 
@@ -50,16 +50,16 @@ Diese Konsistenz darf nicht verwechselt werden mit der Konsistenz der **ACID**, 
 
 ### 1.2.2. Availability (Verfügbarkeit)
 
-Jeder Knoten des Systems garantiert, dass jede Anfrage eine Antwort erhält, auch wenn einige Knoten ausgefallen sind. Dies bedeutet, dass das System immer betriebsbereit ist und eine Antwort liefert, jedoch möglicherweise mit veralteten Daten.
+Jeder Knoten des Systems garantiert, dass **jede Anfrage eine Antwort erhält**, auch wenn einige Knoten ausgefallen sind. Dies bedeutet, dass das System **immer betriebsbereit** ist und eine Antwort liefert, jedoch möglicherweise mit veralteten Daten.
 Es geht hier **nicht** darum, dass jeder Knoten ständig up and running ist.
 
 **Beispiel:** Selbst wenn ein Teil des Systems ausfällt, kann eine Lese- oder Schreibanfrage bearbeitet werden.
 
 ### 1.2.3. Partition Tolerance (Partitionstoleranz/Ausfalltoleranz)
 
-Das System bleibt auch dann funktionsfähig, wenn Netzwerkpartitionen auftreten, d.h., wenn Kommunikation zwischen einigen Knoten des Systems unterbrochen ist.
+Das System bleibt auch dann funktionsfähig, wenn Netzwerkpartitionen auftreten, d.h., wenn **Kommunikation zwischen einigen Knoten des Systems unterbrochen ist**.
 
-**Beispiel:** In einem verteilten System, das weltweit über mehrere Rechenzentren verteilt ist, könnte es Netzwerkunterbrechungen geben, aber das System muss weiterhin funktionieren.
+**Beispiel:** In einem verteilten System, das weltweit über mehrere Rechenzentren verteilt ist, könnte es **Netzwerkunterbrechungen** geben, aber das System muss weiterhin funktionieren.
 
 ## 1.3. Auswirkungen des CAP-Theorems
 
@@ -70,7 +70,7 @@ Das System bleibt auch dann funktionsfähig, wenn Netzwerkpartitionen auftreten,
 
 ### 1.3.1. Consistency + Availability (CA-System)
 
-- Das System garantiert Konsistenz und Verfügbarkeit, kann aber bei Netzwerkpartitionen nicht korrekt funktionieren.
+- Das System garantiert **Konsistenz** und **Verfügbarkeit**, kann aber bei Netzwerkpartitionen nicht korrekt funktionieren.
 - Verfügbar und Konsistent ist nur möglich, wenn zwischen zwei Knoten kein Netzwerk besteht oder die Knoten auf dem gleichen Server/Instanz installiert sind.
 - **Beispiel:** Ein zentralisiertes System **ohne echte Partitionstoleranz** (Single-Node DBMS).
 
@@ -78,7 +78,7 @@ Das System bleibt auch dann funktionsfähig, wenn Netzwerkpartitionen auftreten,
 
 ### 1.3.2. Consistency + Partition Tolerance (CP-System)
 
-- Das System garantiert Konsistenz auch bei Netzwerkpartitionen, nimmt aber in Kauf, dass es während der **Partition nicht verfügbar** ist.
+- Das System garantiert **Konsistenz** auch bei **Netzwerkpartitionen**, nimmt aber in Kauf, dass es während der **Partition nicht verfügbar** ist.
 - Bei einem Netzwerk-Ausfall muss sich der Knoten vom Verbund lösen bis die Netzwerkverbindung hergestellt und die Daten synchronisiert sind.
 - **Beispiel:** Datenbanken, die bei einem Netzwerkausfall Schreibvorgänge blockieren, um Konsistenz sicherzustellen.
 
@@ -86,9 +86,9 @@ Das System bleibt auch dann funktionsfähig, wenn Netzwerkpartitionen auftreten,
 
 ### 1.3.3. Availability + Partition Tolerance (AP-System)
 
-- Das System garantiert Verfügbarkeit auch bei Netzwerkpartitionen, **opfert jedoch die strikte Konsistenz**.
-- Während einem Netzwerk-Ausfalls können zwei Knoten unterschiedliche Inhalte zurückliefern (Daten wurde nur auf einem Knoten gespeichert).
-- **Beispiel:** Eventual Consistency, bei der Daten nach einer Weile konsistent werden (z. B. Amazon DynamoDB).
+- Das System garantiert **Verfügbarkeit** auch bei **Netzwerkpartitionen**, opfert jedoch die **strikte Konsistenz**.
+- Während einem Netzwerk-Ausfalls können zwei Knoten **unterschiedliche** Inhalte zurückliefern (Daten wurde nur auf einem Knoten gespeichert).
+- **Beispiel:** Eventual Consistency, bei der Daten n**ach einer Weile konsistent** werden (z. B. Amazon DynamoDB).
 
 ![AP](./x_gitres/nosql-cap-ap.png)
 
@@ -96,16 +96,16 @@ NoSQL-Datenbanken sind oft in verteilten Umgebungen im Einsatz, bei denen **Part
 Je nach Anwendungsfall setzen sie unterschiedliche Prioritäten:
 
 - **AP-Systeme (Availability + Partition Tolerance):**
-  - Systeme wie Cassandra oder DynamoDB priorisieren Verfügbarkeit und Partitionstoleranz und arbeiten mit "Eventual Consistency".
+  - Systeme wie Cassandra oder DynamoDB priorisieren **Verfügbarkeit** und **Partitionstoleranz** und arbeiten mit "**Eventual Consistenc**y".
 - **CP-Systeme (Consistency + Partition Tolerance):**
-  - Systeme wie HBase oder MongoDB (im strengen Modus) priorisieren Konsistenz und Partitionstoleranz, opfern aber unter Umständen die Verfügbarkeit.
+  - Systeme wie HBase oder MongoDB (im strengen Modus) priorisieren **Konsistenz** und **Partitionstoleranz**, opfern aber unter Umständen die Verfügbarkeit.
 
 ## 1.4. Beispiele und Trade-offs
 
 - E-Commerce:
-  - Bei einem Online-Shop ist **Verfügbarkeit** oft wichtiger als strikte Konsistenz, da Benutzer auch bei Netzwerkproblemen weiter Bestellungen aufgeben können sollen. Hier wäre AP bevorzugt.
+  - Bei einem Online-Shop ist **Verfügbarkeit** oft wichtiger als strikte Konsistenz, da Benutzer auch bei Netzwerkproblemen weiter Bestellungen aufgeben können sollen. Hier wäre **AP** bevorzugt.
 - Bankensysteme:
-  - Strikte **Konsistenz** ist entscheidend, da fehlerhafte Transaktionsdaten katastrophale Folgen haben könnten. Hier wird CP bevorzugt.
+  - Strikte **Konsistenz** ist entscheidend, da fehlerhafte Transaktionsdaten katastrophale Folgen haben könnten. Hier wird **CP** bevorzugt.
 
 - **AP**
   - Priorität
@@ -113,7 +113,7 @@ Je nach Anwendungsfall setzen sie unterschiedliche Prioritäten:
   - zweitrangig
     - Konsistenz, es kann Tage dauern bis ein geänderter DNS-Eintrag propagiert ist
   - Beispiel
-    - Domain Name System (DNS) oder Cloud Computing (horizontale Skalierung)
+    - **Domain Name System (DNS)** oder Cloud Computing (horizontale Skalierung)
     - Konsistenz  ist untergeordnet, es kann dauern bis ein geänderter DNS-Eintrag propagiert wird. (Cloud-Plattformen, Twitter, Facebook, nicht auf strenge Konsistenz angewiesen)
 - **CA**
   - Priorität
@@ -121,7 +121,7 @@ Je nach Anwendungsfall setzen sie unterschiedliche Prioritäten:
     - zweitrangig
       - Partitionierung, müssen nicht zwingend mit Partitionierung umgeben können.
     - Beispiel
-      - Relationales Datenbanksystem RDBMS-Cluster
+      - Relationales **Datenbanksystem RDBMS-Cluster**
       - RDBMS-Cluster mit hoher Verfügbarkeit und Konsistenz
       - Möglichkeiten zu Partitionen ist unwichtig.
 - **CP**
@@ -130,7 +130,7 @@ Je nach Anwendungsfall setzen sie unterschiedliche Prioritäten:
   - zweitrangig
     - Verfügbarkeit
   - Beispiel
-    - Finanzanwendung z.B. Geldautomaten (Ein-/Auszahlungen)
+    - **Finanzanwendung** z.B. Geldautomaten (Ein-/Auszahlungen)
     - Verteilte Finanzanwendungen (Geldautomaten), Konsistenz ist oberstes Gebot.
     - Verfügbarkeit ist zweitrangig. Bei Netzwerkstörungen ist der Geldautomat ausser Betrieb
 
@@ -142,30 +142,30 @@ Je nach Anwendungsfall setzen sie unterschiedliche Prioritäten:
 
 </br>
 
-# 2. Base (Basically Available, Soft State, Eventual Consistency)
+# 2. BASE (Basically Available, Soft State, Eventual Consistency)
 
 ## 2.1. Einführung Base
 
 ![Base](./x_gitres/nosql-base.png)
 
-- **BASE** steht - wie ACID - für Konsistenzeigenschaften, welche von NoSQL-Datenbank-Typen verfolgt werden.
-- Im Unterschied zu ACID, sind die Eigenschaften gelockert.
+- **BASE** steht - wie **ACID** - für Konsistenzeigenschaften, welche von NoSQL-Datenbank-Typen verfolgt werden.
+- Im Unterschied zu **ACID**, sind die Eigenschaften gelockert.
 - Der Grund für die Lockerungen ist das **CAP-Theorem**, welches **verteilte Systeme** behandelt.
 - <https://de.wikipedia.org/wiki/CAP-Theorem>
 
 ## 2.2. Basically Available
 
-- Systeme, die auf das BASE-Modell setzen, versprechen, hochverfügbar zu sein und zu jeder Zeit auf Anfragen reagieren zu können.
-- Dafür machen sie Abstriche bei der Konsistenz (siehe dazu auch CAP-Theorem).
-- Das bedeutet, dass ein System immer auf eine Anfrage reagiert. Die Antwort kann aber auch ein Fehler sein oder einen inkonsistenten Datenstand liefern" (wi-wiki.de)
+- Systeme, die auf das **BASE**-Modell setzen, versprechen, hochverfügbar zu sein und zu jeder Zeit auf Anfragen reagieren zu können.
+- Dafür machen sie **Abstriche bei der Konsistenz** (siehe dazu auch CAP-Theorem).
+- Das bedeutet, dass ein System **immer** auf eine Anfrage reagiert. Die Antwort kann aber auch ein Fehler sein oder einen inkonsistenten Datenstand liefern" (wi-wiki.de)
 
 ## 2.3. Soft State
 
-Der Zustand, in dem noch nicht alle Änderungen an das gesamte System propagiert wurden, aber trotzdem auf Anfragen reagieren kann, nennt man auch **Soft State** (wi-wiki.de)
+Der **Zustand**, in dem noch **nicht alle Änderungen** an das gesamte System propagiert wurden, aber trotzdem auf Anfragen reagieren kann, nennt man auch **Soft State** (wi-wiki.de)
 
 ## 2.4. Eventually Consistency
 
-Im Gegensatz zum strengen ACID-Modell wird in BASE die Konsistenz als eine Art "Übergang" betrachtet, sodass nach einem Update nicht sofort alle Partitionen aktualisiert werden, sondern erst nach einer gewissen Zeit.
+Im Gegensatz zum strengen **ACID**-Modell wird in **BASE** die Konsistenz als eine Art **"Übergang"** betrachtet, sodass nach einem Update **nicht sofort** alle Partitionen aktualisiert werden, sondern erst nach **einer gewissen Zeit**.
 Das System wird also **"letztendlich konsistent" (eventually consistent)**, aber bis dahin in einem inkonsistenten Übergangs-Zustand (**soft state**) sein.(wi-wiki.de)
 
 ## 2.5. Zusammenfassung
@@ -176,7 +176,7 @@ Das System wird also **"letztendlich konsistent" (eventually consistent)**, aber
 - Client ist irgendwann wieder konsistent
 
 - Wichtig ist, wie das System (Infrastruktur) aufgebaut ist.
-  - ACID u. BASE schliessen sich nicht immer aus.
+  - **ACID** u. **BASE** schliessen sich nicht immer aus.
   - Wenn eine NoSQL-Datenbank nicht in einem verteilten System arbeitet, dann kann auch ACID eingehalten werden!
 
 ---
@@ -218,12 +218,12 @@ Das System wird also **"letztendlich konsistent" (eventually consistent)**, aber
 Vergleichen Sie die beiden Konsistenzmodelle **ACID** und **BASE** anhand der folgenden Aspekte und erläutern Sie die relevanten Unterschiede:
 
 - **Definition und Konzept:**
-  - Erklären Sie die grundlegenden Prinzipien von ACID und BASE. Welche Ziele verfolgen diese Modelle?
+  - Erklären Sie die grundlegenden Prinzipien von **ACID** und **BASE**. Welche Ziele verfolgen diese Modelle?
 - **Anwendungsbereiche:**
-  - Nennen Sie typische Szenarien, in denen ACID bzw. BASE bevorzugt wird. Welche Anforderungen der jeweiligen Anwendung beeinflussen die Wahl des Modells?
+  - Nennen Sie typische Szenarien, in denen **ACID** bzw. **BASE** bevorzugt wird. Welche Anforderungen der jeweiligen Anwendung beeinflussen die Wahl des Modells?
 - **Konsistenzverständnis:**
   - Vergleichen Sie die Art und Weise, wie Konsistenz in den beiden Modellen gehandhabt wird (z. B. strikte Konsistenz vs. eventual consistency). Welche Auswirkungen hat dies auf die Systemleistung und Datenintegrität?
 - **Verlässlichkeit und Skalierbarkeit:**
-  - Diskutieren Sie, wie ACID und BASE in Bezug auf Skalierbarkeit und Verfügbarkeit abschneiden. Welche Kompromisse müssen eingegangen werden?
+  - Diskutieren Sie, wie **ACID** und **BASE** in Bezug auf Skalierbarkeit und Verfügbarkeit abschneiden. Welche Kompromisse müssen eingegangen werden?
 - **Beispiele:**
-  - Geben Sie jeweils ein konkretes Beispiel für ein System oder eine Technologie, das/die ACID bzw. BASE verwendet.
+  - Geben Sie jeweils ein konkretes Beispiel für ein System oder eine Technologie, das/die **ACID** bzw. **BASE** verwendet.
