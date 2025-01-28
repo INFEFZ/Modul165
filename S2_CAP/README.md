@@ -107,7 +107,7 @@ Je nach Anwendungsfall setzen sie unterschiedliche Prioritäten:
 - Bankensysteme:
   - Strikte **Konsistenz** ist entscheidend, da fehlerhafte Transaktionsdaten katastrophale Folgen haben könnten. Hier wird **CP** bevorzugt.
 
-- **AP**
+- **AP - (Availability + Partition Tolerance)**
   - Priorität
     - Verfügbarkeit ist hoch ebenso Toleranz gegenüber Ausfall einzelner DNS
   - zweitrangig
@@ -115,7 +115,7 @@ Je nach Anwendungsfall setzen sie unterschiedliche Prioritäten:
   - Beispiel
     - **Domain Name System (DNS)** oder Cloud Computing (horizontale Skalierung)
     - Konsistenz  ist untergeordnet, es kann dauern bis ein geänderter DNS-Eintrag propagiert wird. (Cloud-Plattformen, Twitter, Facebook, nicht auf strenge Konsistenz angewiesen)
-- **CA**
+- **CA - (Consistency + Availability)**
   - Priorität
     - Konsistenz u. Verfügbarkeit, werden in hochverfügbaren Netzwerken betrieben.
     - zweitrangig
@@ -124,7 +124,7 @@ Je nach Anwendungsfall setzen sie unterschiedliche Prioritäten:
       - Relationales **Datenbanksystem RDBMS-Cluster**
       - RDBMS-Cluster mit hoher Verfügbarkeit und Konsistenz
       - Möglichkeiten zu Partitionen ist unwichtig.
-- **CP**
+- **CP - (Consistency + Partition Tolerance )**
   - Priorität
     - Konsistenz u. Partitionstoleranz muss auch bei Störungen im Datenverkehr sichergestellt werd
   - zweitrangig
