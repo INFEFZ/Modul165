@@ -18,7 +18,7 @@
 
 ---
 
-- **[MongoDB Schema u. Index](../M5_Schema/README.md)**
+- **[MongoDB Schema](../M5_Schema/README.md)**
   - Sinn und Zweck der Schema-Validierung
   - Schemas erstellen
   - Validierungen
