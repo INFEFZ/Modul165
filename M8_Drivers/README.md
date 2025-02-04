@@ -18,7 +18,7 @@
 
 ## 1.1. Einleitung
 
-Der MongoDB .NET Driver ist eine Bibliothek, die es ermöglicht, MongoDB-Datenbanken in .NET-Anwendungen (C#, VB.NET, etc.) zu verwenden. Er stellt eine flexible und leistungsfähige API bereit, um Datenbankoperationen wie CRUD (Create, Read, Update, Delete) auszuführen sowie erweiterte Features wie Aggregationen und Transaktionen zu nutzen.
+Der MongoDB **.NET Driver** ist eine Bibliothek, die es ermöglicht, MongoDB-Datenbanken in .NET-Anwendungen (C#, VB.NET, etc.) zu verwenden. Er stellt eine flexible und leistungsfähige API bereit, um Datenbankoperationen wie CRUD (Create, Read, Update, Delete) auszuführen sowie erweiterte Features wie Aggregationen und Transaktionen zu nutzen.
 
 [Start Developing with MongoDB](https://www.mongodb.com/docs/drivers/)
 
@@ -109,7 +109,7 @@ collection.DeleteMany(filter);
 ## 2.1. Aufgabe .NET Driver
 
 | **Vorgabe**             | **Beschreibung**                                                      |
-| ----------------------- | --------------------------------------------------------------------- |
+| :---------------------- | :-------------------------------------------------------------------- |
 | **Lernziele**           | Können einen Datenbanktreiber installieren                            |
 |                         | Können CRUD Operationen in der gewählten Programmiersprache ausführen |
 | **Sozialform**          | Einzelarbeit                                                          |

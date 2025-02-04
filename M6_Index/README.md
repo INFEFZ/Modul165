@@ -27,39 +27,39 @@
 
 ## 1.1. Einleitung
 
-Indizes in MongoDB spielen eine zentrale Rolle bei der Optimierung von Abfragen. Sie **verbessern** die Performance von Leseoperationen erheblich, indem sie den Suchprozess beschleunigen. Ohne Indizes müsste MongoDB bei jeder Abfrage alle Dokumente in einer Sammlung durchsuchen (Full Collection Scan), was bei grossen Datenmengen ineffizient ist.
+**Indizes** in MongoDB spielen eine zentrale Rolle bei der Optimierung von Abfragen. Sie **verbessern** die **Performance** von Leseoperationen erheblich, indem sie den Suchprozess **beschleunigen**. Ohne Indizes müsste MongoDB bei jeder Abfrage alle Dokumente in einer Sammlung durchsuchen (**Full Collection Scan**), was bei grossen Datenmengen ineffizient ist.
 
-Indizes sind ein unverzichtbares Werkzeug zur Optimierung der Performance in MongoDB. Sie sollten sorgfältig geplant und verwaltet werden, um das richtige Gleichgewicht zwischen Lese- und Schreibgeschwindigkeit sowie Speicherverbrauch zu erreichen.
-> Index müssen verwaltet werden, bei update, insert müssen diese nachgepflegt werden.
+**Indizes** sind ein unverzichtbares Werkzeug zur Optimierung der Performance in MongoDB. Sie sollten sorgfältig geplant und verwaltet werden, um das richtige Gleichgewicht zwischen Lese- und Schreibgeschwindigkeit sowie Speicherverbrauch zu erreichen.
+> Index müssen verwaltet werden, bei `update`, `insert` müssen diese **nachgepflegt** werden.
 
 ## 1.2. Sinn und Zweck von Indizes
 
-- Verbesserte Abfragegeschwindigkeit
+- **Verbesserte Abfragegeschwindigkeit**
   - Ohne Index: MongoDB muss alle Dokumente durchsuchen, um passende Ergebnisse zu finden.
   - Mit Index: MongoDB greift direkt auf die relevanten Daten zu.
-- Optimierung von Sortieroperationen
+- **Optimierung von Sortieroperationen**
   - Indizes ermöglichen das schnelle Sortieren von Ergebnissen nach bestimmten Feldern.
-- Unterstützung von Uniqueness
+- **Unterstützung von Uniqueness**
   - Unique-Indizes stellen sicher, dass Werte in einem Feld eindeutig sind.
-- Skalierung und Performance
+- **Skalierung und Performance**
   - Indizes verbessern die Effizienz von Abfragen in grossen Datenmengen und verteilter Architektur (Sharding).
 
 ## 1.3. Arten von Indizes in MongoDB
 
 ### 1.3.1. Einzelnes Feld (Single Field Index)
 
-- Ein Index wird auf ein einziges Feld angewendet.
-- Beispiel: `db.users.createIndex({ "name": 1 })`
+- Ein **Index** wird auf ein einziges Feld angewendet.
+- **Beispiel**: `db.users.createIndex({ "name": 1 })`
   - 1: Sortierung in aufsteigender Reihenfolge.
   - -1: Sortierung in absteigender Reihenfolge.
 
 ### 1.3.2. Zusammengesetzter Index (Compound Index)
 
-- Ein Index wird auf mehrere Felder angewendet.
-- Beispiel: `db.orders.createIndex({ "status": 1, "date": -1 })`
+- Ein **Index** wird auf mehrere Felder angewendet.
+- **Beispiel**: `db.orders.createIndex({ "status": 1, "date": -1 })`
 - Optimiert Abfragen, die sowohl status als auch date filtern.
 
-Beispiel
+**Beispiel:**
 
 ```javascript
 db.customer.createIndex({firstName: 1, lastName: 1})
@@ -71,7 +71,7 @@ db.customer.createIndex({firstName: 1, lastName: 1})
 
 ### 1.3.3. Text-Index
 
-- Wird verwendet, um Volltextsuche auf String-Feldern zu ermöglichen.
+- Wird verwendet, um **Volltextsuche** auf String-Feldern zu ermöglichen.
 - `db.articles.createIndex({ "content": "text" })`
 - Optimiert Textsuchen wie `db.articles.find({ $text: { $search: "MongoDB" } })`
 
@@ -96,19 +96,19 @@ db.collection.aggregate([{ $indexStats: {} }])
 
 ## 1.5. Best Practices für die Nutzung von Indizes
 
-- Analyse der Abfragen
+- **Analyse der Abfragen**
   - Verwenden Sie den `explain()`-Befehl, um Abfragen zu analysieren:
   - `db.collection.find({ "name": "Max" }).explain("executionStats")`
-- Auswahl der richtigen Felder
+- **Auswahl der richtigen Felder**
   - Indizes sollten auf Feldern erstellt werden, die häufig für Filter- oder Sortieroperationen verwendet werden.
-- Minimierung der Anzahl von Indizes
+- **Minimierung der Anzahl von Indizes**
   - Zu viele Indizes können die Schreibgeschwindigkeit beeinträchtigen, da sie bei jedem Einfügen/Aktualisieren aktualisiert werden müssen.
-- Verwendung von Compound Indizes
+- **Verwendung von Compound Indizes**
   - Verwenden Sie zusammengesetzte Indizes, um komplexe Abfragen zu optimieren.
-- Überwachung der Indexgrösse
+- **Überwachung der Indexgrösse**
   - Indizes benötigen zusätzlichen Speicherplatz. Nutzen Sie `db.stats()` und `db.collection.stats()`, um die Speichergrösse zu überwachen.
 
-Eine Suchabfrage kann mit der explain() Methode untersucht werden.
+Eine Suchabfrage kann mit der `explain()` Methode untersucht werden.
 Dabei wird ein Ausführungsplan mit verschiedenen Parametern ausgegeben.
 
 Wichtige Datenwerte zur Ausführung sind u.a.:
@@ -156,23 +156,23 @@ db.orders.find({ "status": "completed", "date": "2024-01-01" })
 
 ## 2.1. Aufgabe Blog Index
 
-| Vorgabe             | Beschreibung                                                         |
-| ------------------- | -------------------------------------------------------------------- |
-| Lernziele           | Mit einem Index auf Sucheigenschaften eine Suchabfrage beschleunigen |
-|                     | Indexe erstellen                                                     |
-|                     | Index über mehrere Eigenschaften erstellen                           |
-|                     | Abfragen mit Ausführungsplan prüfen                                  |
-|                     | Indexe prüfen und löschen                                            |
-|                     | Volltextindex erstellen                                              |
-| Sozialform          | Einzelarbeit                                                         |
-| Auftrag             | siehe unten                                                          |
-| Hilfsmittel         | [Indexe](https://www.mongodb.com/docs/manual/indexes/)               |
-| Erwartete Resultate |                                                                      |
-| Zeitbedarf          | 90 min                                                               |
-| Lösungselmente      | Vollständige Skriptdatei mit sämtlichen Lösungsdateien               |
-|                     | Kurzpräsentation der Lösung                                          |
+| **Vorgabe**             | **Beschreibung**                                                     |
+| :---------------------- | :------------------------------------------------------------------- |
+| **Lernziele**           | Mit einem Index auf Sucheigenschaften eine Suchabfrage beschleunigen |
+|                         | Indexe erstellen                                                     |
+|                         | Index über mehrere Eigenschaften erstellen                           |
+|                         | Abfragen mit Ausführungsplan prüfen                                  |
+|                         | Indexe prüfen und löschen                                            |
+|                         | Volltextindex erstellen                                              |
+| **Sozialform**          | Einzelarbeit                                                         |
+| **Auftrag**             | siehe unten                                                          |
+| **Hilfsmittel**         | [Indexe](https://www.mongodb.com/docs/manual/indexes/)               |
+| **Erwartete Resultate** |                                                                      |
+| **Zeitbedarf**          | 90 min                                                               |
+| **Lösungselmente**      | Vollständige Skriptdatei mit sämtlichen Lösungsdateien               |
+|                         | Kurzpräsentation der Lösung                                          |
 
-Ausgangssituation
+**Ausgangssituation**:
 Die Blog Datenbank, die in vorangehender Aufgabe gelöst wurde, soll nun für die schnelle Suche bei grossen Datenmengen mit Indices erweitert werden.
 
 **Aufgabe 1:**
@@ -212,20 +212,20 @@ Liste alle Indexe einer Kollektion und lösche diese anschliessend.
 
 ## 2.2. Aufgabe Lernangebot
 
-| Vorgabe             | Beschreibung                                                                               |
-| ------------------- | ------------------------------------------------------------------------------------------ |
-| Lernziele           | Sie sind in der Lage eine Datenbasis vollständig in der NoSQL Datenbank MongoDB einzufügen |
-|                     | Sie können Datenbanken, Collection und Dokumente in MongoDB erstellen und abfragen         |
-|                     | Index über mehrere Eigenschaften erstellen                                                 |
-|                     | Abfragen mit Ausführungsplan prüfen                                                        |
-|                     | Indexe prüfen                                                                              |
-| Sozialform          | Einzelarbeit                                                                               |
-| Auftrag             | siehe unten                                                                                |
-| Hilfsmittel         | [Indexe](https://www.mongodb.com/docs/manual/indexes/)                                     |
-| Erwartete Resultate |                                                                                            |
-| Zeitbedarf          | 90 min                                                                                     |
-| Lösungselmente      | Vollständige Skriptdatei mit sämtlichen Lösungsdateien                                     |
-|                     | Kurzpräsentation der Lösung                                                                |
+| **Vorgabe**             | **Beschreibung**                                                                           |
+| :---------------------- | :----------------------------------------------------------------------------------------- |
+| **Lernziele**           | Sie sind in der Lage eine Datenbasis vollständig in der NoSQL Datenbank MongoDB einzufügen |
+|                         | Sie können Datenbanken, Collection und Dokumente in MongoDB erstellen und abfragen         |
+|                         | Index über mehrere Eigenschaften erstellen                                                 |
+|                         | Abfragen mit Ausführungsplan prüfen                                                        |
+|                         | Indexe prüfen                                                                              |
+| **Sozialform**          | Einzelarbeit                                                                               |
+| **Auftrag**             | siehe unten                                                                                |
+| **Hilfsmittel**         | [Indexe](https://www.mongodb.com/docs/manual/indexes/)                                     |
+| **Erwartete Resultate** |                                                                                            |
+| **Zeitbedarf**          | 90 min                                                                                     |
+| **Lösungselmente**      | Vollständige Skriptdatei mit sämtlichen Lösungsdateien                                     |
+|                         | Kurzpräsentation der Lösung                                                                |
 
 **Vorgehen:**
 

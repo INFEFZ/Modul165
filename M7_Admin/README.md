@@ -30,9 +30,9 @@
 
 ## 1.1. Einleitung
 
-MongoDB bietet integrierte Mechanismen für die Verwaltung von Benutzern und deren Berechtigungen. Benutzer werden auf Datenbankebene definiert und authentifiziert. Mit dem User Management können Administratoren den Zugriff auf Datenbanken und deren Ressourcen sicher und kontrolliert verwalten.
+**MongoDB** bietet integrierte Mechanismen für die Verwaltung von **Benutzern** und deren **Berechtigungen**. Benutzer werden auf Datenbankebene definiert und **authentifiziert**. Mit dem User Management können Administratoren den Zugriff auf Datenbanken und deren Ressourcen sicher und kontrolliert verwalten.
 
-Das User Management in MongoDB ist flexibel und leistungsfähig. Mit Rollen und Berechtigungen lässt sich der Zugriff präzise steuern, was Sicherheit und Kontrolle gewährleistet. Eine gut geplante Benutzer- und Rollenverwaltung ist essenziell für den sicheren Betrieb einer MongoDB-Datenbank.
+Das **User Management** in MongoDB ist flexibel und leistungsfähig. Mit **Rollen** und **Berechtigungen** lässt sich der Zugriff präzise steuern, was Sicherheit und Kontrolle gewährleistet. Eine gut geplante Benutzer- und Rollenverwaltung ist essenziell für den **sicheren Betrieb** einer MongoDB-Datenbank.
 
 ![User Management](./x_gitres/mongodb-user-management.png)
 
@@ -76,8 +76,8 @@ db.updateUser("leser_schreiber", {
 
 ## 1.3. Rollen und Berechtigungen
 
-| Rolle            | Beschreibung                              |
-| ---------------- | ----------------------------------------- |
+| **Rolle**        | **Beschreibung**                          |
+| :--------------- | :---------------------------------------- |
 | **read**         | Leserechte auf der angegebenen Datenbank. |
 | **readWrite**    | Lese- und Schreibrechte.                  |
 | **dbAdmin**      | Verwaltungsrechte (Indexe, Statistiken).  |
@@ -169,17 +169,17 @@ db.updateUser("app", {roles: ["read"]})
 
 ## 2.1. Dump und Restore
 
-Das Sichern und Wiederherstellen in MongoDB ist ein wichtiger Bestandteil beim Umgang mit einer Datenbank.
+Das **Sichern** und **Wiederherstellen** in MongoDB ist ein wichtiger Bestandteil beim Umgang mit einer Datenbank.
 MongoDB stellt für die Sicherstellung und Wiederherstellung zwei Dienstprogramme zur Verfügung:
 
-- mongodump
-- mongorestore
+- **mongodump**
+- **mongorestore**
 
 ![Dump und Restore](./x_gitres/mongodb-dump-restore.png)
 
 ### 2.1.1. mongodump
 
-Das Backup-Dienstprogramm mongodump können verschiedene Sicherstellung ausgeführt werden:
+Das B**ackup-Dienstprogramm** mongodump können verschiedene Sicherstellung ausgeführt werden:
 
 - einen Server (komplett)
 - eine Datenbank
@@ -190,7 +190,7 @@ Syntax: `mongodump --host <database-host> -d <database-name> --port <database-po
 
 ### 2.1.2. mongorestore
 
-Das Wiederherstellungsdienstprogramm mongorestore stellt eine von mongodump erstellte binäre Sicherung wieder her.
+Das **Wiederherstellungsdienstprogramm** mongorestore stellt eine von mongodump erstellte binäre Sicherung wieder her.
 
 Syntax: `mongorestore --host [host name] --port 3017 --username [user] --password [password] [backup folder]`
 Beispiel: `mongorestore -h <host>:<port> -u <username> -p <password> -d <DBNAME> /path/to/destination/directory/<DBNAME>`
@@ -228,26 +228,26 @@ mongoexport –-help
 
 Die Replikation in MongoDB ermöglicht es, Daten über mehrere Server zu verteilen, um **Hochverfügbarkeit**, **Datenredundanz** und **Lastverteilung** sicherzustellen. Dies wird hauptsächlich durch die Verwendung von **Replica Sets** erreicht.
 
-Durch die Kombination von Primary, Secondaries und optionalen Arbitrern lässt sich die Datenbank optimal an die Anforderungen moderner Anwendungen anpassen.
+Durch die Kombination von **Primary**, **Secondaries** und optionalen **Arbitrern** lässt sich die Datenbank optimal an die Anforderungen moderner Anwendungen anpassen.
 
-- Die Ausfallsicherheit durch sogenannte Replica Sets sichergestellt.
-- MongoDB unterstützt mittels Sharding die horizontale Skalierung (Partitionierung der Daten).
-- Die Daten über mehrere Server hinweg, den sogenannten Shards partitioniert.
+- Die **Ausfallsicherheit** durch sogenannte Replica Sets sichergestellt.
+- MongoDB unterstützt mittels **Sharding** die horizontale Skalierung (Partitionierung der Daten).
+- Die Daten über mehrere Server hinweg, den sogenannten **Shards** partitioniert.
 - ![Replica](./x_gitres/mongodb-replica.png)
 
 ## 3.1. Was ist ein Replica Sets
 
-Ein Replica Set ist eine Gruppe von MongoDB-Instanzen, die die gleichen Daten enthalten. Es besteht aus folgenden Komponenten:
+Ein Replica Set ist eine** Gruppe von MongoDB-Instanzen**, die die gleichen Daten enthalten. Es besteht aus folgenden Komponenten:
 
-- Primary
+- **Primary**
   - Nimmt alle Schreib- und Leseanfragen entgegen (standardmäßig für Schreiboperationen).
   - Repliziert die Datenänderungen an die Secondaries.
   - Es gibt nur einen Primary in einem Replica Set zu einem bestimmten Zeitpunkt.
-- Secondary
+- **Secondary**
   - Speichert Kopien der Daten des Primaries.
   - Kann als Failover-Option dienen, falls der Primary ausfällt.
   - Optional für Leseoperationen konfigurierbar (readPreference).
-- Arbiter
+- **Arbiter**
   - Nimmt nicht an der Datenspeicherung teil.
   - Dient nur dazu, bei Wahlen die Mehrheit zu gewährleisten (wichtig bei ungerader Anzahl von Mitgliedern).
 
@@ -271,13 +271,13 @@ rs.initiate({
 
 ## 3.4. Wichtige Szenarien
 
-- Failover
+- **Failover**
   - Wenn der Primary ausfällt, führen die Secondaries eine Wahl durch, um einen neuen Primary zu bestimmen.
   - Beispiel:
     - Primary: Server A
     - Secondary: Server B, Server C
     - Fällt Server A aus, wird einer der Secondaries zum neuen Primary.
-- Geografische Replikation
+- **Geografische Replikation**
   - Ein Replica Set kann so konfiguriert werden, dass Daten über mehrere Regionen repliziert werden, um eine höhere Ausfallsicherheit und niedrigere Latenz für regionale Nutzer zu gewährleisten.
 
 ## 3.5. Weiterführende Quellen

@@ -22,36 +22,36 @@
 
 ## 1.1. Einleitung
 
-- MongoDB ist schemalos, bietet jedoch die Möglichkeit, eine Schema-Validierung zu implementieren.
+- MongoDB ist **schemalos**, bietet jedoch die Möglichkeit, eine **Schema-Validierung** zu implementieren.
 - Diese Validierungen gewährleisten, dass die Daten einer Sammlung bestimmten Regeln entsprechen.
-- Dadurch bleibt die Datenintegrität gewahrt, und Fehler durch unstrukturierte oder fehlerhafte Daten werden vermieden.
-- Die Schema-Validierung in MongoDB kombiniert die Vorteile einer schemalosen Datenbank mit der Datenkonsistenz traditioneller Datenbanken.
+- Dadurch bleibt die **Datenintegrität** gewahrt, und Fehler durch unstrukturierte oder fehlerhafte Daten werden vermieden.
+- Die **Schema-Validierung** in MongoDB kombiniert die Vorteile einer schemalosen Datenbank mit der Datenkonsistenz traditioneller Datenbanken.
 - Sie ist besonders nützlich, um strukturelle Probleme zu vermeiden und robuste, fehlerfreie Anwendungen zu entwickeln.
 
 ## 1.2. Sinn und Zweck der Schema-Validierung
 
-- Datenintegrität sicherstellen:
+- **Datenintegrität sicherstellen:**
   - Stellt sicher, dass alle Dokumente in einer Sammlung die gleichen Schlüssel und Datentypen verwenden.
   - Vermeidet inkonsistente oder fehlerhafte Daten.
-- Validierung auf Anwendungsebene minimieren:
+- **Validierung auf Anwendungsebene minimieren:**
   - Reduziert die Komplexität des Codes, da Validierungen direkt in der Datenbank erfolgen.
-- Flexibilität bewahren:
+- **Flexibilität bewahren:**
   - MongoDB bleibt flexibel, da die Validierung optional ist und je nach Bedarf konfiguriert werden kann.
-- Fehler und Anomalien verhindern:
+- **Fehler und Anomalien verhindern:**
   - Blockiert die Einfügung oder Aktualisierung von Dokumenten, die nicht den definierten Regeln entsprechen.
 
 ## 1.3. Vorteile der Schema-Validierung
 
-- Strukturierte Daten: Garantiert konsistente Daten innerhalb der Sammlung.
-- Weniger Fehler: Ungültige Daten werden frühzeitig erkannt.
-- Flexibilität: Schema-Validierung kann je nach Projektanforderung angepasst oder deaktiviert werden.
-- Sicherheitssteigerung: Verhindert böswillige oder unpassende Datenoperationen.
+- **Strukturierte Daten:** Garantiert konsistente Daten innerhalb der Sammlung.
+- **Weniger Fehler:** Ungültige Daten werden frühzeitig erkannt.
+- **Flexibilität:** Schema-Validierung kann je nach Projektanforderung angepasst oder deaktiviert werden.
+- **Sicherheitssteigerung:** Verhindert böswillige oder unpassende Datenoperationen.
 
-Regeln:
+**Regeln:**
 
-- bsonType: Datentyp
-- required: Pflichtelemente
-- properties: Datentypen, min, max, usw.
+- **bsonType**: Datentyp
+- **required**: Pflichtelemente
+- **properties**: Datentypen, min, max, usw.
 
 ## 1.4. Übersicht der Datentypen
 
@@ -61,8 +61,8 @@ Regeln:
 
 Erstelle eine Sammlung, in der alle Dokumente folgende Felder enthalten müssen:
 
-- name: Ein String, der erforderlich ist.
-- alter: Eine Zahl, die optional ist, aber größer oder gleich 0 sein muss.
+- **name**: Ein String, der erforderlich ist.
+- **alter**: Eine Zahl, die optional ist, aber größer oder gleich 0 sein muss.
 
 ```javascript
 db.createCollection("benutzer", {
@@ -97,7 +97,7 @@ db.benutzer.insertOne({ name: 123, alter: -5 })
 
 ## 1.6. Validierung hinzufügen
 
-Schemavalidierungsregeln können mit dem `$jsonSchema`-Operator definiert werden.
+**Schemavalidierungsregeln** können mit dem `$jsonSchema`-Operator definiert werden.
 
 Beispiel: Validierung nachträglich hinzufügen
 
@@ -152,17 +152,17 @@ db.createCollection("produkte", {
 
 ## 1.8. Beispiele
 
-null Werte zulassen:
+**null Werte zulassen:**
 >![null values](./x_gitres/mongodb-schema-null.png)
 
-Bedingungen definieren (checks)
+**Bedingungen definieren (checks):**
 
 - lineItems.discountedPrice muss kleiner als lineItems.price sein.
 - Das items Element muss ein Array sein.
 
 >![Checks](./x_gitres/mongodb-schema-checks.png)
 
-Das enum Feld in country lässt nur Dokumente zu, deren country entweder "France", "United Kingdom", "United States" ist.
+Das **enum** Feld in country lässt nur Dokumente zu, deren country entweder "France", "United Kingdom", "United States" ist.
 >![enum](./x_gitres/mongodb-schema-enum.png)
 
 RegEx, Enum
@@ -178,17 +178,17 @@ RegEx, Enum
 
 ## 2.1. Aufgabe Blog Schema
 
-| Vorgabe             | Beschreibung                                                                                          |
-| ------------------- | ----------------------------------------------------------------------------------------------------- |
-| Lernziele           | Mit Schema eine bestimmte Datenstruktur definieren und erzwingen ($jsonSchema)                        |
-|                     | Validierungsregeln (Datentypen, Wertebereiche) festlegen und prüfen Existierende Dokumente validieren |
-| Sozialform          | Einzelarbeit                                                                                          |
-| Auftrag             | siehe unten                                                                                           |
-| Hilfsmittel         | [Validation](https://www.mongodb.com/docs/manual/core/schema-validation/)                             |
-| Erwartete Resultate |                                                                                                       |
-| Zeitbedarf          | 90 min                                                                                                |
-| Lösungselmente      | Vollständige Skriptdatei mit sämtlichen Lösungsdateien                                                |
-|                     | Kurzpräsentation der Lösung                                                                           |
+| **Vorgabe**             | **Beschreibung**                                                                                      |
+| :---------------------- | :---------------------------------------------------------------------------------------------------- |
+| **Lernziele**           | Mit Schema eine bestimmte Datenstruktur definieren und erzwingen (`$jsonSchema`)                      |
+|                         | Validierungsregeln (Datentypen, Wertebereiche) festlegen und prüfen Existierende Dokumente validieren |
+| **Sozialform**          | Einzelarbeit                                                                                          |
+| **Auftrag**             | siehe unten                                                                                           |
+| **Hilfsmittel**         | [Validation](https://www.mongodb.com/docs/manual/core/schema-validation/)                             |
+| **Erwartete Resultate** |                                                                                                       |
+| **Zeitbedarf**          | 90 min                                                                                                |
+| **Lösungselmente**      | Vollständige Skriptdatei mit sämtlichen Lösungsdateien                                                |
+|                         | Kurzpräsentation der Lösung                                                                           |
 
 **Ausgangssituation:**
 
