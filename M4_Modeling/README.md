@@ -261,7 +261,7 @@ Indexiere min. 2 Nichtschlüssel-Elemente (z.B. name, band_name), sodass die Suc
   - MongoDB Create-Index-Skript-Datei
 
 **Aufgabe 4:**
-Schreibe zu folgenden Datenabfragen die jeweiligen SQL- und MongoDB Befehle
+Schreibe zu folgenden Datenabfragen die jeweiligen SQL- und MongoDB Befehle.
 
 1. Ermittle die Anzahl Album Einträge
 2. Ermittle die Preissumme aller Alben
@@ -306,7 +306,7 @@ Ein Teammitglied hat bereits Vorarbeit geleistet und folgende Datenbasis festgel
 
 **Aufgabe 1:**
 
-Entwickle ein Datenmodell, welches die aufgeführte Datenbasis dokumentorientiert grafisch darstellt.
+Entwickle ein **Datenmodell**, welches die aufgeführte Datenbasis dokumentorientiert grafisch darstellt.
 Erstelle ggf. mehrere verschiedene Versionen des Datenmodells.
 Berücksichtige dabei auch die gelernten wichtigen Grundsätze einer dokumentbasierten Datenstruktur (**Embed or Reference, rule of thumb**):
 
