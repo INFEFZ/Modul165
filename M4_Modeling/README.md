@@ -294,9 +294,9 @@ Schreibe zu folgenden Datenabfragen die jeweiligen SQL- und MongoDB Befehle.
 **Ausgangssituation:**
 Sie erhalten von einem Kunden einen Auftrag für eine **Blog**-Datenbank ein Modell zu erstellen, welche die üblichen Daten eines Blogs verwaltet. Dabei müssen folgende Anforderungen berücksichtigt werden:
 
-- Es gibt Benutzer
-- Ein Benutzer kann einen Post erfassen.
-- Ein Benutzer kann auf einen Post kommentieren.
+- In der Blog-Datenbank gibt es Benutzer (`users`).
+- Ein Benutzer kann Posts (`posts`) erfassen (auch mehrere).
+- Ein Benutzer kann Posts (auch mehrere) kommentieren (`comments`).
 
 Ein Teammitglied hat bereits Vorarbeit geleistet und folgende Datenbasis festgelegt:
 
