@@ -265,12 +265,12 @@ Schreibe zu folgenden Datenabfragen die jeweiligen SQL- und MongoDB Befehle.
 
 1. Ermittle die Anzahl Album Einträge
 2. Ermittle die Preissumme aller Alben
-3. Ermittle die Preissumme der Alben pro Band (band_name)
-4. Ermittle die Preissumme der Alben pro Band (band_name), sortiert nach Preissumme aufsteigend
-5. Ermittle die Anzahl Alben pro Band (band_name)
-6. Ermittle die Anzahl Alben pro Band (band_name) mit Status = "A"
-7. Ermittle die Summe der Musikstücke (plays) pro Bandname.
-8. Ermittle pro Album den Song mit den meisten Musikstücken (plays).
+3. Ermittle die Preissumme der Alben pro Band (`band_name`)
+4. Ermittle die Preissumme der Alben pro Band (`band_name`), sortiert nach Preissumme aufsteigend
+5. Ermittle die Anzahl Alben pro Band (`band_name`)
+6. Ermittle die Anzahl Alben pro Band (`band_name`) mit `Status = "A"`
+7. Ermittle die Summe der Musikstücke (`plays`) pro Bandname.
+8. Ermittle pro Album den Song mit den meisten Musikstücken (`plays`).
 
 ---
 
@@ -318,10 +318,10 @@ Berücksichtige dabei auch die gelernten wichtigen Grundsätze einer dokumentbas
 
 - **Lösungselemente:**
   - Grafik zum Datenmodell als .png oder .pdf Datei (db-model.png)
-- ![Model](./x_gitres/task-modeling-example.png)
+  - Beispiel: ![Model](./x_gitres/task-modeling-example.png)
 
 **Aufgabe 2:**
-Schreibe die MongoDB-Befehle, die das Datenmodell in einer neuen Datenbank (Name = blog) zu implementieren. Füge min. 3 Dokumente je Kollektion ein.
+Schreibe die MongoDB-Befehle, die das Datenmodell in einer neuen Datenbank (Name = `blog`) zu implementieren. Füge min. 3 Dokumente je Kollektion ein.
 
 - **Lösungselemente:**
   - MongoDB Skript-Befehle (create-model.mongodb.js).
@@ -333,7 +333,7 @@ Prüfe ob alle Daten korrekt in der Datenbank eingetragen mittels einfachen Such
   - MongoDB Skript-Befehle (simple-queries.mongodb.js)
 
 **Aufgabe 4:**
-Konsultiere die MongoDB Dokumentation und recherchiere Daten den $lookup Befehl um referenzierte Dokumente abzufragen (analog JOIN in SQL-Abfragen).
+Konsultiere die MongoDB Dokumentation und recherchiere Daten den `$lookup` Befehl um referenzierte Dokumente abzufragen (analog JOIN in SQL-Abfragen).
 <https://www.mongodb.com/docs/v3.4/reference/operator/aggregation/lookup/>
 
 - **Lösungselemente:**
