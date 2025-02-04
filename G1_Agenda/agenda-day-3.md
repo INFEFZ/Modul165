@@ -10,7 +10,7 @@
 
 ---
 
-- **[MongoDB Modeling)](../M4_Modeling/README.md)**
+- **[MongoDB Modeling](../M4_Modeling/README.md)**
   - Embedded Documents (einbetten)
   - Dokumente aufteilen u. verknüpfen (references)
   - Beispiele (Use Cases)

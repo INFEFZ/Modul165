@@ -55,7 +55,7 @@ Daten, die logisch miteinander verbunden sind, werden in einem Dokument gespeich
 
 ![Embedding](./x_gitres/mongodb-modeling-embedding.png)
 
-Vorteile:
+**Vorteile:**
 
 - Reduzierte Anzahl von Joins.
 - Schnellere Leseoperationen.
@@ -67,7 +67,7 @@ Vorteile:
 - Diese denormalisierten Datenmodelle ermöglichen es Anwendungen, zusammenhängende Daten in einer einzigen Datenbankoperation abzurufen und zu bearbeiten.
 - Für viele Anwendungsfälle in MongoDB ist das denormalisierte Datenmodell optimal.
 
-Nachteile:
+**Nachteile:**
 
 - Grosse Dokumente bedeuten mehr Overhead, wenn die meisten Felder nicht relevant sind.
 - Sie können die Abfrageleistung erhöhen, indem Sie die Grösse der Dokumente begrenzen, die Sie für jede Abfrage über die Leitung senden.
@@ -99,7 +99,7 @@ Daten werden auf mehrere Dokumente verteilt und durch Referenzen verknüpft.
 
 ![Linking](./x_gitres/mongodb-modeling-link.png)
 
-Vorteile:
+**Vorteile:**
 
 - Bessere Datenkonsistenz.
 - Reduzierung von Redundanz bei häufig wiederkehrenden Daten.
@@ -117,12 +117,12 @@ Vorteile:
 - Referenzen führt zu einer besseren Datenintegrität.
 - Geringeren Speicherbedarf
 
-Nachteile:
+**Nachteile:**
 
 - Um alle Daten in den referenzierten Dokumenten abrufen zu können, sind mindestens zwei Abfragen oder `$lookup` erforderlich, um alle Informationen abzurufen.
 - Die Änderung einer Dateneinheit führt in der Regel dazu, dass viele Dokumente aktualisiert werden.
 
-Beispiel
+**Beispiel:**
 
 ```javascript
 {
@@ -148,18 +148,18 @@ Beispiel
 ## 1.5. Entscheidungsfaktoren (Embedded vs Referenced)
 
 | **Kriterium**                  | **Embedded**                    | **Referenced**                     |
-| ------------------------------ | ------------------------------- | ---------------------------------- |
+| :----------------------------- | :------------------------------ | :--------------------------------- |
 | Datenbeziehung                 | 1:n oder n:1                    | n:m oder sehr komplexe Beziehungen |
 | Häufigkeit der Datenzugriffe   | Häufig zusammen abgefragt       | Unterschiedliche Zugriffsmuster    |
 | Datenmenge                     | Klein bis mittelgross           | Sehr grosse Datenmengen            |
 | Flexibilität der Datenstruktur | Weniger Änderungen erforderlich | Häufige Strukturänderungen         |
 
 | **Beziehung**             | **Art**                                                      | **Referenced**                                          |
-| ------------------------- | ------------------------------------------------------------ | ------------------------------------------------------- |
+| :------------------------ | :----------------------------------------------------------- | :------------------------------------------------------ |
 | One-to-One                | Bevorzugt Schlüssel-Wert-Paare </br> innerhalb des Dokuments | ![OneToOne](./x_gitres/mongodb-data-one-to-one.png)     |
 | One-to-Few                | Einbettung bevorzugen                                        |                                                         |
 | One-to-Many               | Einbettung bevorzugen                                        | ![OneToMany](./x_gitres/mongodb-data-one-to-many.png)   |
-| One-to-Thousands/millions | WReferenzierung bevorzugen                                   | ![ManyToMany](./x_gitres/mongodb-data-many-to-many.png) |
+| One-to-Thousands/millions | Referenzierung bevorzugen                                    | ![ManyToMany](./x_gitres/mongodb-data-many-to-many.png) |
 | Many-to-Many              | Referenzierung bevorzugen                                    |                                                         |
 
 ---
@@ -221,48 +221,46 @@ Eine sorgfältige Planung und die Auswahl des passenden Modells (embedded oder r
 
 ## 2.1. Aufgabe Album SQL-Migration
 
-| Vorgabe             | Beschreibung                                                                                    |
-| ------------------- | ----------------------------------------------------------------------------------------------- |
-| Lernziele           | Können ein Datenmodell implementieren                                                           |
-|                     | Kennen die Möglichkeiten der Aggregationsoperatoren                                             |
-|                     | Können eine Datenabfrage basierend auf einer Aggregationspipeline mit mehreren Stages umsetzen. |
-| Sozialform          | Einzelarbeit                                                                                    |
-| Auftrag             | siehe unten                                                                                     |
-| Hilfsmittel         | [Modeling](https://www.mongodb.com/docs/manual/data-modeling/)                                  |
-|                     | [Query](https://www.mongodb.com/docs/v3.4/reference/operator/aggregation/lookup/)               |
-| Erwartete Resultate |                                                                                                 |
-| Zeitbedarf          | 50 min                                                                                          |
-| Lösungselmente      | Vollständige Skriptdatei mit sämtlichen Lösungsdateien                                          |
-|                     | Kurzpräsentation der Lösung                                                                     |
+| **Vorgabe**             | **Beschreibung**                                                                                |
+| :---------------------- | :---------------------------------------------------------------------------------------------- |
+| **Lernziele**           | Können ein Datenmodell implementieren                                                           |
+|                         | Kennen die Möglichkeiten der Aggregationsoperatoren                                             |
+|                         | Können eine Datenabfrage basierend auf einer Aggregationspipeline mit mehreren Stages umsetzen. |
+| **Sozialform**          | Einzelarbeit                                                                                    |
+| **Auftrag**             | siehe unten                                                                                     |
+| **Hilfsmittel**         | [Modeling](https://www.mongodb.com/docs/manual/data-modeling/)                                  |
+|                         | [Query](https://www.mongodb.com/docs/v3.4/reference/operator/aggregation/lookup/)               |
+| **Erwartete Resultate** |                                                                                                 |
+| **Zeitbedarf**          | 50 min                                                                                          |
+| **Lösungselmente**      | Vollständige Skriptdatei mit sämtlichen Lösungsdateien                                          |
+|                         | Kurzpräsentation der Lösung                                                                     |
 
-Ausgangssituation
+**Ausgangssituation:**
 Die SQL-Beispiele gehen von zwei Tabellen aus, `album` und songs, die durch die Spalten song.album_id und songs.id verbunden sind.
 
-So sehen die Tabellen aus:
+**So sehen die Tabellen aus:**
 
 ![Album](./x_gitres/task-modeling-album.png)
 
-Aufgabe 1
+**Aufgabe 1:**
 Erstelle das Schema zu diesen beiden Tabellen in einer relationalen Datenbank per SQL-Befehlen und füge die Daten in die Datenbanktabellen ein.
 
-- Lösungselemente:
+- **Lösungselemente:**
   - SQL-Create-Table Script-Datei
   - SQL-Insert-Data Script-Datei
 
-Aufgabe 2
+**Aufgabe 2:**
+Führe eine MongoDB Migration durch. Verwende dabei eine **Embedded** Datenstruktur.
 
-Führe eine MongoDB Migration durch. Verwende dabei eine Embedded Datenstruktur.
-
-- Lösungselemente:
+- **Lösungselemente:**
   - MongoDB Insert-Skript-Datei
 
-Aufgabe 3
 Indexiere min. 2 Nichtschlüssel-Elemente (z.B. name, band_name), sodass die Suchabfragen beschleunigt werden.
 
-- Lösungselemente:
+- **Lösungselemente:**
   - MongoDB Create-Index-Skript-Datei
 
-Aufgabe 4
+**Aufgabe 4:**
 Schreibe zu folgenden Datenabfragen die jeweiligen SQL- und MongoDB Befehle
 
 1. Ermittle die Anzahl Album Einträge
@@ -278,23 +276,23 @@ Schreibe zu folgenden Datenabfragen die jeweiligen SQL- und MongoDB Befehle
 
 ## 2.2. Aufgabe Blog-Model implementieren
 
-| Vorgabe             | Beschreibung                                                                                    |
-| ------------------- | ----------------------------------------------------------------------------------------------- |
-| Lernziele           | Können ein dokumentorientiertes Datenmodel entwickeln und grafisch darstellen                   |
-|                     | Können ein Datenmodell implementieren                                                           |
-|                     | Kennen die Möglichkeiten der Aggregationsoperatoren                                             |
-|                     | Können eine Datenabfrage basierend auf einer Aggregationspipeline mit mehreren Stages umsetzen. |
-| Sozialform          | Einzelarbeit                                                                                    |
-| Auftrag             | siehe unten                                                                                     |
-| Hilfsmittel         | [Modeling](https://www.mongodb.com/docs/manual/data-modeling/)                                  |
-|                     | [Query](https://www.mongodb.com/docs/v3.4/reference/operator/aggregation/lookup/)               |
-| Erwartete Resultate |                                                                                                 |
-| Zeitbedarf          | 50 min                                                                                          |
-| Lösungselmente      | Vollständige Skriptdatei mit sämtlichen Lösungsdateien                                          |
-|                     | Kurzpräsentation der Lösung                                                                     |
+| **Vorgabe**             | **Beschreibung**                                                                                |
+| :---------------------- | :---------------------------------------------------------------------------------------------- |
+| **Lernziele**           | Können ein dokumentorientiertes Datenmodel entwickeln und grafisch darstellen                   |
+|                         | Können ein Datenmodell implementieren                                                           |
+|                         | Kennen die Möglichkeiten der Aggregationsoperatoren                                             |
+|                         | Können eine Datenabfrage basierend auf einer Aggregationspipeline mit mehreren Stages umsetzen. |
+| **Sozialform**          | Einzelarbeit                                                                                    |
+| **Auftrag**             | siehe unten                                                                                     |
+| **Hilfsmittel**         | [Modeling](https://www.mongodb.com/docs/manual/data-modeling/)                                  |
+|                         | [Query](https://www.mongodb.com/docs/v3.4/reference/operator/aggregation/lookup/)               |
+| **Erwartete Resultate** |                                                                                                 |
+| **Zeitbedarf**          | 50 min                                                                                          |
+| **Lösungselmente**      | Vollständige Skriptdatei mit sämtlichen Lösungsdateien                                          |
+|                         | Kurzpräsentation der Lösung                                                                     |
 
-Ausgangssituation
-Sie erhalten von einem Kunden einen Auftrag für eine Blog-Datenbank ein Modell zu erstellen, welche die üblichen Daten eines Blogs verwaltet. Dabei müssen folgende Anforderungen berücksichtigt werden:
+**Ausgangssituation:**
+Sie erhalten von einem Kunden einen Auftrag für eine **Blog**-Datenbank ein Modell zu erstellen, welche die üblichen Daten eines Blogs verwaltet. Dabei müssen folgende Anforderungen berücksichtigt werden:
 
 - Es gibt Benutzer
 - Ein Benutzer kann einen Post erfassen.
@@ -302,11 +300,11 @@ Sie erhalten von einem Kunden einen Auftrag für eine Blog-Datenbank ein Modell 
 
 Ein Teammitglied hat bereits Vorarbeit geleistet und folgende Datenbasis festgelegt:
 
-- users: _id, name, age, email
-- posts: _id, title, text, tags (soll ein Array sein)
-- comments: _id, text
+- users: `_id`, `name`, `age`, `email`
+- posts: `_id`, `title`, `text`, `tags` (soll ein Array sein)
+- comments: `_id`, `text`
 
-Aufgabe 1
+**Aufgabe 1:**
 
 Entwickle ein Datenmodell, welches die aufgeführte Datenbasis dokumentorientiert grafisch darstellt.
 Erstelle ggf. mehrere verschiedene Versionen des Datenmodells.
@@ -318,58 +316,58 @@ Berücksichtige dabei auch die gelernten wichtigen Grundsätze einer dokumentbas
 - Wie häufig werden sich die eingebetteten Daten ändern?
 - Wie gross kann ein Dokument werden (Redundanzen)?
 
-- Lösungselemente:
+- **Lösungselemente:**
   - Grafik zum Datenmodell als .png oder .pdf Datei (db-model.png)
 - ![Model](./x_gitres/task-modeling-example.png)
 
-Aufgabe 2
+**Aufgabe 2:**
 Schreibe die MongoDB-Befehle, die das Datenmodell in einer neuen Datenbank (Name = blog) zu implementieren. Füge min. 3 Dokumente je Kollektion ein.
 
-- Lösungselemente:
+- **Lösungselemente:**
   - MongoDB Skript-Befehle (create-model.mongodb.js).
 
-Aufgabe 3
+**Aufgabe 3:**
 Prüfe ob alle Daten korrekt in der Datenbank eingetragen mittels einfachen Suchbefehlen inkl. Suchen in Arrays.
 
-- Lösungselemente:
+- **Lösungselemente:**
   - MongoDB Skript-Befehle (simple-queries.mongodb.js)
 
-Aufgabe 4
+**Aufgabe 4:**
 Konsultiere die MongoDB Dokumentation und recherchiere Daten den $lookup Befehl um referenzierte Dokumente abzufragen (analog JOIN in SQL-Abfragen).
 <https://www.mongodb.com/docs/v3.4/reference/operator/aggregation/lookup/>
 
-- Lösungselemente:
+- **Lösungselemente:**
   - MongoDB Skript-Befehle (aggregation-queries.mongodb.js)
 
 ---
 
 ## 2.3. Aufgabe CarUser Datenbank implementieren
 
-| Vorgabe             | Beschreibung                                                                               |
-| ------------------- | ------------------------------------------------------------------------------------------ |
-| Lernziele           | Sie sind in der Lage eine Datenbasis vollständig in der NoSQL Datenbank MongoDB einzufügen |
-|                     | Sie können Datenbanken, Collection und Dokumente in die MongoDB erstellen und abfragen     |
-| Sozialform          | Einzelarbeit                                                                               |
-| Auftrag             | siehe unten                                                                                |
-| Hilfsmittel         | [Modeling](https://www.mongodb.com/docs/manual/data-modeling/)                             |
-| Erwartete Resultate |                                                                                            |
-| Zeitbedarf          | 90 min                                                                                     |
-| Lösungselmente      | Vollständige Skriptdatei mit sämtlichen Lösungsdateien                                     |
-|                     | Kurzpräsentation der Lösung                                                                |
+| **Vorgabe**             | **Beschreibung**                                                                           |
+| :---------------------- | :----------------------------------------------------------------------------------------- |
+| **Lernziele**           | Sie sind in der Lage eine Datenbasis vollständig in der NoSQL Datenbank MongoDB einzufügen |
+|                         | Sie können Datenbanken, Collection und Dokumente in die MongoDB erstellen und abfragen     |
+| **Sozialform**          | Einzelarbeit                                                                               |
+| **Auftrag**             | siehe unten                                                                                |
+| **Hilfsmittel**         | [Modeling](https://www.mongodb.com/docs/manual/data-modeling/)                             |
+| **Erwartete Resultate** |                                                                                            |
+| **Zeitbedarf**          | 90 min                                                                                     |
+| **Lösungselmente**      | Vollständige Skriptdatei mit sämtlichen Lösungsdateien                                     |
+|                         | Kurzpräsentation der Lösung                                                                |
 
-Datenbasis
+**Datenbasis:**
 
 - ![CarUser](./x_gitres/task-modeling-caruser.png)
 
-Vorgehen
+**Vorgehen:**
 
-- Überlegen Sie sich, wie die Dokumentstruktur (JSON) aufgebaut werden soll.
-- Erstelle eine neue Datenbank (CarUsers)
+- Überlegen Sie sich, wie die **Dokumentstruktur** (JSON) aufgebaut werden soll.
+- Erstelle eine neue Datenbank (`CarUsers`)
 - Erstelle die Collections
 - Füge die Daten als Dokumente der Collection hinzu.
 - Kontrolliere die eingefügten Daten mit einer Suchabfrage
 
-Optional
+**Optional:**
 
 - Überlege wie zur Verminderung von Redundanzen das Modell mit «Reference Documents» aufgebaut werden kann, sodass ein Auto auch mehreren Benutzern gehören kann.
 
@@ -377,39 +375,39 @@ Optional
 
 ## 2.4. Aufgabe Abo-Verwaltung implementieren
 
-| Vorgabe             | Beschreibung                                                                               |
-| ------------------- | ------------------------------------------------------------------------------------------ |
-| Lernziele           | Sie sind in der Lage eine Datenbasis vollständig in der NoSQL Datenbank MongoDB einzufügen |
-|                     | Sie können Datenbanken, Collection und Dokumente in die MongoDB erstellen und abfragen     |
-| Sozialform          | Einzelarbeit                                                                               |
-| Auftrag             | siehe unten                                                                                |
-| Hilfsmittel         | [Modeling](https://www.mongodb.com/docs/manual/data-modeling/)                             |
-| Erwartete Resultate |                                                                                            |
-| Zeitbedarf          | 90 min                                                                                     |
-| Lösungselmente      | Vollständige Skriptdatei mit sämtlichen Lösungsdateien                                     |
-|                     | Kurzpräsentation der Lösung                                                                |
+| **Vorgabe**             | **Beschreibung**                                                                           |
+| :---------------------- | :----------------------------------------------------------------------------------------- |
+| **Lernziele**           | Sie sind in der Lage eine Datenbasis vollständig in der NoSQL Datenbank MongoDB einzufügen |
+|                         | Sie können Datenbanken, Collection und Dokumente in die MongoDB erstellen und abfragen     |
+| **Sozialform**          | Einzelarbeit                                                                               |
+| **Auftrag**             | siehe unten                                                                                |
+| **Hilfsmittel**         | [Modeling](https://www.mongodb.com/docs/manual/data-modeling/)                             |
+| **Erwartete Resultate** |                                                                                            |
+| **Zeitbedarf**          | 90 min                                                                                     |
+| **Lösungselmente**      | Vollständige Skriptdatei mit sämtlichen Lösungsdateien                                     |
+|                         | Kurzpräsentation der Lösung                                                                |
 
-Datenbasis
+**Datenbasis:**
 
-| Abo | Anrede | Name       | Vorname | Ort         | Eintritt   | Aboart    | Gebühr  |
-| --- | ------ | ---------- | ------- | ----------- | ---------- | --------- | ------- |
-| 33  | Herr   | Balmelli   | Marco   | 8000 Zürich | 01.01.1990 | Student   | 500.00  |
-| 44  | Frau   | Bürgin     | Sandra  | 8021 Zürich | 01.05.1989 | Jahresabo | 1000.00 |
-| 55  | Herr   | Emmenegger | Reto    | 8048 Zürich | 01.10.1994 | Monatsabo | 150.00  |
-| 66  | Herr   | Keller     | Georg   | 8021 Zürich | 30.11.1996 | Jahresabo | 1000.00 |
-| 77  | Frau   | Müller     | Karina  | 3000 Bern   | 30.08.2005 | Jahresabo | 1000.00 |
-| 88  | Herr   | Groz       | Thomas  | 4000 Basel  | 15.07.2005 | Student   | 500.00  |
-| 99  | Frau   | Isabelle   | Pozzi   | 3000 Bern   | 15.07.2005 | Monatsabo | 150.00  |
+| **Abo** | **Anrede** | **Name**   | **Vorname** | **Ort**     | **Eintritt** | **Aboart** | **Gebühr** |
+| ------- | ---------- | ---------- | ----------- | ----------- | ------------ | ---------- | ---------- |
+| 33      | Herr       | Balmelli   | Marco       | 8000 Zürich | 01.01.1990   | Student    | 500.00     |
+| 44      | Frau       | Bürgin     | Sandra      | 8021 Zürich | 01.05.1989   | Jahresabo  | 1000.00    |
+| 55      | Herr       | Emmenegger | Reto        | 8048 Zürich | 01.10.1994   | Monatsabo  | 150.00     |
+| 66      | Herr       | Keller     | Georg       | 8021 Zürich | 30.11.1996   | Jahresabo  | 1000.00    |
+| 77      | Frau       | Müller     | Karina      | 3000 Bern   | 30.08.2005   | Jahresabo  | 1000.00    |
+| 88      | Herr       | Groz       | Thomas      | 4000 Basel  | 15.07.2005   | Student    | 500.00     |
+| 99      | Frau       | Isabelle   | Pozzi       | 3000 Bern   | 15.07.2005   | Monatsabo  | 150.00     |
 
-Vorgehen
+**Vorgehen:**
 
-- Überlegen Sie sich, wie die Dokumentstruktur (JSON) aufgebaut werden soll.
-- Erstelle eine neue Datenbank (Abo)
-- Erstelle eine neue Collection (Mitglieder)
+- Überlegen Sie sich, wie die **Dokumentstruktur** (JSON) aufgebaut werden soll.
+- Erstelle eine neue Datenbank (`Abo`)
+- Erstelle eine neue Collection (`Mitglieder`)
 - Füge die Daten als Dokumente der Collection hinzu.
 - Kontrolliere die eingefügten Daten mit einer Suchabfrage
 
-Optional
+**Optional:**
 
 - Erstelle für eine performante Datenabfrage min. 2 Indexe
 - Stelle einige Datenkonsistenz Bedingungen mittels eines Schemas (`$jsonSchema`) sicher
