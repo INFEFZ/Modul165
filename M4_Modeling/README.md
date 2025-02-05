@@ -292,6 +292,7 @@ Schreibe zu folgenden Datenabfragen die jeweiligen SQL- und MongoDB Befehle.
 |                         | Kurzpräsentation der Lösung                                                                     |
 
 **Ausgangssituation:**
+
 Sie erhalten von einem Kunden einen Auftrag für eine **Blog**-Datenbank ein Modell zu erstellen, welche die üblichen Daten eines Blogs verwaltet. Dabei müssen folgende Anforderungen berücksichtigt werden:
 
 - In der Blog-Datenbank gibt es Benutzer (`users`).
@@ -311,10 +312,10 @@ Erstelle ggf. mehrere verschiedene Versionen des Datenmodells.
 Berücksichtige dabei auch die gelernten wichtigen Grundsätze einer dokumentbasierten Datenstruktur (**Embed or Reference, rule of thumb**):
 
 - Data that is accessed together gets stored together!
-- Wie oft werden die eingebetteten Informationen benötigt?
-- Muss ich mit den eingebetteten Daten suchen?
-- Wie häufig werden sich die eingebetteten Daten ändern?
-- Wie gross kann ein Dokument werden (Redundanzen)?
+- Wie oft werden die eingebetteten Informationen **benötigt**?
+- Muss ich mit den eingebetteten Daten **suchen**?
+- Wie **häufig** werden sich die eingebetteten Daten ändern?
+- Wie **gross** kann ein Dokument werden (Redundanzen)?
 
 - **Lösungselemente:**
   - Grafik zum Datenmodell als .png oder .pdf Datei (db-model.png)
