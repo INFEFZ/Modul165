@@ -28,7 +28,7 @@
 
 # 1. Neo4j Modeling
 
-- Die Datenmodellierung in Neo4j folgt einem graphzentrierten Ansatz, bei dem die Realität in Form von Knoten (Nodes), Beziehungen (Relationships), Labels und Eigenschaften dargestellt wird.
+- Die Datenmodellierung in **Neo4j** folgt einem graphzentrierten Ansatz, bei dem die Realität in Form von **Knoten** (Nodes), **Beziehungen** (Relationships), **Labels** und Eigenschaften dargestellt wird.
 - Dies ermöglicht eine natürliche Repräsentation von vernetzten Daten wie sozialen Netzwerken, Lieferketten oder Wissensgrafen.
 - ![Graph Model](./x_gitres/neo4j-graph-modell.png)
 
@@ -47,7 +47,8 @@ Zunächst analysierst du die Problemstellung und identifizierst:
 
 **Erstellen des Graphmodells:**
 
-Das Modell wird mit Knoten, Labels, Beziehungen und Eigenschaften gezeichnet. Dabei gilt:
+Das Modell wird mit Knoten, Labels, Beziehungen und Eigenschaften gezeichnet. 
+Dabei gilt:
 
 - Knoten repräsentieren Entitäten.
 - Beziehungen sind gerichtete oder ungerichtete Verbindungen zwischen Knoten.
@@ -128,7 +129,7 @@ RETURN m.title, r.rating
 - Sie ermöglicht es, Knoten (Nodes), Beziehungen (Relationships), Labels und Eigenschaften in einem intuitiven Drag-and-Drop-Editor zu zeichnen.
 - Mit der Anwendung können **Graphstrukturen** schnell erstellt, bearbeitet und als **Bild** oder **Cypher-Abfragen** exportiert werden, um sie direkt in Neo4j oder andere Graphdatenbanken zu implementieren.
 
-- Die arrows.app eignet sich ideal für Entwickler, Datenarchitekten und Graphdatenbank-Enthusiasten, die mit minimalem Aufwand professionelle Diagramme erstellen möchten.
+- Die **arrows.app** eignet sich ideal für Entwickler, Datenarchitekten und Graphdatenbank-Enthusiasten, die mit minimalem Aufwand professionelle Diagramme erstellen möchten.
 
 - Öffne die [arrows.app](https://arrows.app/) und arbeite das Tutorial durch.
 
@@ -227,7 +228,7 @@ Erstellt einen Index auf die Eigenschaft since der Beziehung KNOWS.
 ## 2.3. Zusammenfassung
 
 | **Funktion**   | **Ziel**                                   | **Beispiel**                        |
-| -------------- | ------------------------------------------ | ----------------------------------- |
+| :------------- | :----------------------------------------- | :---------------------------------- |
 | **UNIQUE**     | Sicherstellen, dass Werte einzigartig sind | `CREATE CONSTRAINT ... IS UNIQUE`   |
 | **NOT NULL**   | Sicherstellen, dass Werte existieren       | `CREATE CONSTRAINT ... IS NOT NULL` |
 | **Index**      | Beschleunigung von Abfragen                | `CREATE INDEX ...                   |
@@ -260,7 +261,7 @@ DROP INDEX personNameIndex
 ## 4.1. Technology Datenbank modellieren und implementieren
 
 | **Vorgabe**             | **Beschreibung**                                                                                                       |
-| ----------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| :---------------------- | :--------------------------------------------------------------------------------------------------------------------- |
 | **Lernziele**           | Kennt die Bedienung der arraws.app Anwendung                                                                           |
 |                         | Die Studierenden sind in der Lage ein relationales Datenbank Modell in eine Neo4j Graph-Datenbank umzusetzen           |
 |                         | Sie können ein relationales Datenbankmodell in ein Graph-Modell überführen                                             |
@@ -284,7 +285,7 @@ DROP INDEX personNameIndex
 ## 4.2. Lernangebot atenbank modellieren und implementieren
 
 | **Vorgabe**             | **Beschreibung**                                                                                                       |
-| ----------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| :---------------------- | :--------------------------------------------------------------------------------------------------------------------- |
 | **Lernziele**           | Die Studierenden sind in der Lage ein relationales Datenbank Modell in eine Neo4j Graph-Datenbank umzusetzen           |
 |                         | Sie können ein relationales Datenbankmodell in ein Graph-Modell überführen                                             |
 |                         | Sie kennen die Grundelemente wie Node und Relationship von Graph-Datenbanken und können diese in Cypher implementieren |

@@ -23,9 +23,9 @@
 
 # 1. Neo4j Cypher
 
-- Cypher ist die deklarative **Abfragesprache** von Neo4j, einer führenden Graphdatenbank.
-- Mit Cypher können Benutzer effizient Daten aus Graphdatenbanken abfragen, einfügen, aktualisieren und löschen.
-- Die Sprache verwendet eine lesbare, ASCII-artige Syntax, um Knoten (Nodes), Beziehungen (Relationships) und Eigenschaften zu modellieren.
+- **Cypher** ist die deklarative **Abfragesprache** von Neo4j, einer führenden Graphdatenbank.
+- Mit **Cypher** können Benutzer effizient Daten aus Graphdatenbanken abfragen, einfügen, aktualisieren und löschen.
+- Die Sprache verwendet eine lesbare, **ASCII-artige Syntax**, um **Knoten** (Nodes), **Beziehungen** (Relationships) und **Eigenschaften** zu modellieren.
 - Die Syntax bietet eine visuelle und logische Möglichkeit, Muster von Knoten und Beziehungen im Graphen abzugleichen
 Cypher wurde so konzipiert, dass es für jedermann leicht zu erlernen, zu verstehen und zu verwenden ist, aber auch die Leistungsfähigkeit und Funktionalität anderer Standard-Datenzugriffssprachen bietet.
 
@@ -33,7 +33,7 @@ Cypher wurde so konzipiert, dass es für jedermann leicht zu erlernen, zu verste
 
 ## 1.1. Cypher – Beziehungen darstellen
 
-- Beziehungen werden in Cypher durch einen Pfeil -> dargestellt
+- **Beziehungen** werden in Cypher durch einen **Pfeil** -> dargestellt
 - Den Beziehungstyp und die Eigenschaften von Beziehungen werden mit eckigen Klammern angegeben **[]**
 - Beispiel: **LIKES**, **IS_FRIEND_WITH** u. **WORKS_FOR**
 
@@ -51,8 +51,8 @@ MATCH (p:Person)-[:LIKES]-(t:Technology)
 
 ![Relationen](./x_gitres/neo4j-cypher-relations.png)
 
-- Eigenschaften sind Name-Werte Paare um Knoten oder Beziehungen zu beschreiben.
-- Eigenschaften werden in geschweiften Klammern definiert.
+- **Eigenschaften** sind **Name-Werte Paare** um Knoten oder Beziehungen zu beschreiben.
+- **Eigenschaften** werden in **geschweiften Klammern** definiert.
 - Beispiel Knoten (name) und Beziehungseigenschaft (since)
 - Knoteneigenschaft: (p:Person {name: 'Jennifer'})
 - Beziehungseigenschaft: -[rel:IS_FRIENDS_WITH {since: 2018}]->
@@ -61,7 +61,7 @@ MATCH (p:Person)-[:LIKES]-(t:Technology)
 
 ## 1.2. Muster
 
-- Mit Cypher können einfache und sehr komplexe Muster formuliert werden.
+- Mit **Cypher** können einfache und sehr komplexe Muster formuliert werden.
 - In Mustern können Knoten und Beziehungen beliebig kombiniert werden.
 
 Beispiel:
@@ -74,7 +74,7 @@ Beispiel:
 
 ## 1.3. MATCH
 
-Mit dem Schlüsselwort MATCH wird in Cypher nach einem vorhandenen Knoten, einer Beziehung, einem Label, einer Eigenschaft oder einem Muster in der Datenbank gesucht.
+Mit dem Schlüsselwort `MATCH` wird in **Cypher** nach einem vorhandenen **Knoten**, einer **Beziehung**, einem **Label**, einer Eigenschaft oder einem Muster in der Datenbank gesucht.
 
 ![MATCH](./x_gitres/neo4j-cypher-match.png)
 
@@ -275,7 +275,7 @@ RETURN m, r, j
 ## 2.1. Gruppenarbeit Neo4j Cypher
 
 | **Vorgabe**             | **Beschreibung**                                                                                |
-| ----------------------- | ----------------------------------------------------------------------------------------------- |
+| :---------------------- | :---------------------------------------------------------------------------------------------- |
 | **Lernziele**           | Die Studierenden gewinnen eine Übersicht zu den Basiselementen der Neo4j Cypher Query Sprache   |
 |                         | Sie können die Grundelemente anhand von konkreten Beispielen selbständig erläutern und anwenden |
 | **Sozialform**          | Gruppenarbeit                                                                                   |
@@ -293,7 +293,7 @@ RETURN m, r, j
 - Verwenden Sie dabei die Hilfsmittel wie Flow-Charts, Beamer, Wandtafel usw. und verweisen Sie ggf. auf weitere die Literatur.
 - Die Zusammenfassungen und Beispiel sind dann den anderen Klassenkameraden zur Verfügung zu stellen.
 
-Gruppe 1 – Syntax, Naming rules (<https://neo4j.com/docs/cypher-manual/current/syntax/>)
+**Gruppe 1 – Syntax, Naming rules (<https://neo4j.com/docs/cypher-manual/current/syntax/>)**
 
 - Comments
 - Naming rules for Nodes, Node Variables, Node Labels
@@ -302,7 +302,7 @@ Gruppe 1 – Syntax, Naming rules (<https://neo4j.com/docs/cypher-manual/current
 - Syntax
 - ASCII-Art
 
-Gruppe 2 – Nodes / Relationships (<https://neo4j.com/docs/cypher-manual/current/clauses/create/>)
+**Gruppe 2 – Nodes / Relationships (<https://neo4j.com/docs/cypher-manual/current/clauses/create/>)**
 
 - Nodes, Node Variables, Node Labels
 - CREATE
@@ -312,7 +312,7 @@ Gruppe 2 – Nodes / Relationships (<https://neo4j.com/docs/cypher-manual/curren
 - CREATE relationship (Patterns)
 - Relationship Properties
 
-Gruppe 3 – Query (<https://neo4j.com/docs/cypher-manual/current/clauses/>)
+**Gruppe 3 – Query (<https://neo4j.com/docs/cypher-manual/current/clauses/>)**
 
 - MATCH
 - WHERE
@@ -329,7 +329,7 @@ Gruppe 3 – Query (<https://neo4j.com/docs/cypher-manual/current/clauses/>)
 ## 2.2. Aura Fully Managed Graph Database
 
 | **Vorgabe**             | **Beschreibung**                                                            |
-| ----------------------- | --------------------------------------------------------------------------- |
+| :---------------------- | :-------------------------------------------------------------------------- |
 | **Lernziele**           | Sie können den Zugang zur Neo4j Aura Cloud Datenbank einrichten             |
 |                         | Sie können eine Datenbank-Instanz anlegen                                   |
 |                         | Sie können Tutorial Datensets installieren                                  |
@@ -355,7 +355,7 @@ Gruppe 3 – Query (<https://neo4j.com/docs/cypher-manual/current/clauses/>)
 
 ![Aura Tutorial](./x_gitres/neo4j-aura-tutorial.png)
 
-Arbeiten Sie eines der nachfolgend aufgeführten Tutorials durch (siehe More Datasets):
+**Arbeiten Sie eines der nachfolgend aufgeführten Tutorials durch (siehe More Datasets):**
 
 - Social Network Analysis
 - Healthcare Analytics

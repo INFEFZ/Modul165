@@ -24,10 +24,10 @@
 
 ## 1.1. Was ist Neo4j?
 
-Neo4j ist eine führende Graphdatenbank, die speziell dafür entwickelt wurde, Beziehungen zwischen Daten effizient zu speichern und abzurufen. Sie basiert auf einem graphenorientierten Modell, bei dem Daten als Knoten (Nodes), Beziehungen (Edges) und Eigenschaften (Properties) dargestellt werden.
+**Neo4j** ist eine führende **Graphdatenbank**, die speziell dafür entwickelt wurde, **Beziehungen** zwischen Daten effizient zu speichern und abzurufen. Sie basiert auf einem **graphenorientierten** Modell, bei dem Daten als **Knoten (Nodes)**, **Beziehungen (Edges)** und **Eigenschaften (Properties)** dargestellt werden.
 
-Neo4j wird in Bereichen wie Social Media, Finanzdienstleistungen, Logistik, IT-Netzwerken und Wissensmanagement eingesetzt, um komplexe Datenstrukturen intuitiv und effizient zu analysieren.
-Hauptvorteile sind die einfache Modellierung von Daten, schnelle Abfragen und ein starkes Ökosystem mit zahlreichen Integrationen und Community-Support.
+**Neo4j** wird in Bereichen wie Social Media, Finanzdienstleistungen, Logistik, IT-Netzwerken und Wissensmanagement eingesetzt, um komplexe Datenstrukturen intuitiv und effizient zu analysieren.
+Hauptvorteile sind die **einfache Modellierung** von Daten, **schnelle Abfragen** und ein **starkes Ökosystem** mit zahlreichen Integrationen und Community-Support.
 
 ![Überblick](./x_gitres/neo4j-overview.jpg)
 
@@ -39,13 +39,13 @@ Konzept
 
 ### 1.1.1. Merkmale
 
-- Leistungsstark bei **Beziehungsdaten**
+- **Leistungsstark bei Beziehungsdaten**
   - Optimiert für die Analyse und Abfrage komplexer Beziehungen.
-- **Cypher** Query Language
+- **Cypher Query Language**
   - Eine deklarative, SQL-ähnliche Sprache für Abfragen von Graphen.
-- Skalierbarkeit
+- **Skalierbarkeit**
   - Unterstützt grosse Datenmengen und verteilte Cluster-Umgebungen.
-- Echtzeit-Abfragen
+- **Echtzeit-Abfragen**
   - Ideal für Anwendungen wie Empfehlungsmaschinen, Betrugserkennung und Netzwerküberwachung.
 
 ![Movie Beispiel](./x_gitres/neo4j-overview-2.png)
@@ -60,13 +60,14 @@ Konzept
 
 ## 1.4. Hauptelemente von Neo4j
 
-Die Hauptelemente bilden die Grundlage von Neo4j und ermöglichen es, komplexe Datennetze intuitiv zu modellieren und zu analysieren.
-Eine Graph-Datenstruktur besteht aus Knoten (Nodes), die durch Beziehungen (Relationships) verbunden werden können.
-Das Neo4j-Eigenschaftsgraphen-Datenbankmodell besteht aus:
+Die Hauptelemente bilden die Grundlage von Neo4j und ermöglichen es, **komplexe Datennetze** intuitiv zu modellieren und zu analysieren.
+Eine Graph-Datenstruktur besteht aus **Knoten (Nodes)**, die durch **Beziehungen (Relationships)** verbunden werden können.
 
-- Knoten beschreiben Entitäten eines Bereichs und können keine oder mehr Labels zur Klassifizierung haben.
-- Beziehungen beschreiben eine Verbindung zwischen einem Quell- und einem Ziel-Knoten und haben immer eine Richtung.
-- Knoten und Beziehungen können Eigenschaften (Schlüssel-Wert-Paare) festgelegt werden.
+**Das Neo4j-Eigenschaftsgraphen-Datenbankmodell besteht aus:**
+
+- **Knoten** beschreiben Entitäten eines Bereichs und können keine oder mehr Labels zur Klassifizierung haben.
+- **Beziehungen** beschreiben eine Verbindung zwischen einem Quell- und einem Ziel-Knoten und haben immer eine Richtung.
+- Knoten und Beziehungen können **Eigenschaften (Schlüssel-Wert-Paare)** festgelegt werden.
 
 ![Hauptelemente](./x_gitres/neo4j-element-overview.png)
 
@@ -78,9 +79,9 @@ Das Neo4j-Eigenschaftsgraphen-Datenbankmodell besteht aus:
 
 ![Knoten](./x_gitres/neo4j-element-node.png)
 
-- Labels
+- **Labels**
   - Person, Actor
-- Properties
+- **Properties**
   - name, born
 
 ```javascript
@@ -89,15 +90,15 @@ CREATE (:Person {name: 'Alice', age: 30, city: 'Berlin'})
 
 ### 1.4.2. Beziehungen (Relationships)
 
-- Beziehungen verbinden zwei Knoten und haben einen Typ (Relationship Type), der ihre Bedeutung beschreibt.
-- Eine Beziehung hat immer nur einen Beziehungstyp.
-- Sie können ebenfalls Eigenschaften enthalten. Beziehungen sind gerichtet, z. B. "WOHNHAFT_IN" oder "KAUFT".
+- **Beziehungen** verbinden zwei Knoten und haben einen Typ (Relationship Type), der ihre Bedeutung beschreibt.
+- Eine Beziehung hat immer nur einen **Beziehungstyp**.
+- Sie können ebenfalls **Eigenschaften** enthalten. Beziehungen sind gerichtet, z. B. "WOHNHAFT_IN" oder "KAUFT".
 
 ![Relationship](./x_gitres/neo4j-element-relationship-2.png)
 
-- Die ACTED_IN Beziehung mit dem Tom Hanks als Quell- und Forrest Gump als Zielknoten.
-- Bei Knoten "Tom Hanks" ist es eine ausgehende, bei "Forrest Gump" eine eingehende Beziehung.
-- Properties: roles: ['Forrest'], performance:5
+- Die `ACTED_IN` **Beziehung** mit dem Tom Hanks als Quell- und Forrest Gump als Zielknoten.
+- Bei **Knoten** `"Tom Hanks"` ist es eine ausgehende, bei `"Forrest Gump"` eine eingehende Beziehung.
+- **Properties**: roles: ['Forrest'], performance:5
 - roles ist ein array[]
 - `CREATE ()-[:ACTED_IN {roles: ['Forrest'], performance: 5}]->()`
 
@@ -108,9 +109,9 @@ CREATE (p)-[:WOHNHAFT_IN]->(c)
 
 ### 1.4.3. Eigenschaften (Properties)
 
-- Eigenschaften sind Schlüssel-Wert-Paare, die zusätzliche Informationen über Knoten oder Beziehungen speichern.
-- Eigenschaften besitzen einen Datentyp wie z.B. String, Boolean etc.
-- Eigenschaften können auch in Datenfelder (Arrays) gespeichert werden.
+- **Eigenschaften** sind **Schlüssel-Wert-Paare**, die zusätzliche Informationen über Knoten oder Beziehungen speichern.
+- **Eigenschaften** besitzen einen Datentyp wie z.B. String, Boolean etc.
+- **Eigenschaften** können auch in Datenfelder (Arrays) gespeichert werden.
 
 ![Properties](./x_gitres/neo4j-element-properties.png)
 
@@ -120,8 +121,8 @@ CREATE (:City {name: 'Berlin', population: 3600000})
 
 ### 1.4.4. Labels
 
-- Labels kategorisieren Knoten und ermöglichen eine effiziente Abfrage von Daten.
-- Ein Knoten kann mehrere Labels haben.
+- **Labels** kategorisieren Knoten und ermöglichen eine effiziente Abfrage von Daten.
+- Ein Knoten kann mehrere **Labels** haben.
 
 ![Label](./x_gitres/neo4j-element-label.png)
 
@@ -131,7 +132,7 @@ CREATE (:Person:Employee {name: 'Bob', position: 'Manager'})
 
 ### 1.4.5. Abfragen (Cypher)
 
-- Cypher ist die Abfragesprache von Neo4j.
+- **Cypher** ist die Abfragesprache von Neo4j.
 - Sie ermöglicht es, Knoten, Beziehungen und deren Eigenschaften zu erstellen, zu lesen, zu aktualisieren und zu löschen.
 
 ```javascript
@@ -151,7 +152,7 @@ MATCH (p:Person {name: 'Alice'}) RETURN p
 ## 2.1. Movie Tutorial
 
 | **Vorgabe**             | **Beschreibung**                               |
-| ----------------------- | ---------------------------------------------- |
+| :---------------------- | :--------------------------------------------- |
 | **Lernziele**           | Sie können die Neo4j Desktop Anwendung starten |
 |                         | Sie können einen Abfragebefehl ausführen       |
 |                         | Sie können das Abfrageresultat untersuchen     |

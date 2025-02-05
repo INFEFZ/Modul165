@@ -15,7 +15,7 @@
 
 # 1. Neo4j .NET Driver
 
-Der [Neo4j .NET Driver](https://neo4j.com/docs/getting-started/languages-guides/neo4j-dotnet/) ist eine offizielle .NET-Bibliothek für die Interaktion mit Neo4j-Datenbanken. Er ermöglicht Entwicklern, Cypher-Abfragen direkt aus C#- oder anderen .NET-Sprachen auszuführen. Der Treiber unterstützt asynchrone und synchrone Kommunikation mit der Datenbank und nutzt das Bolt-Protokoll für schnelle und sichere Verbindungen
+Der [Neo4j .NET Driver](https://neo4j.com/docs/getting-started/languages-guides/neo4j-dotnet/) ist eine offizielle .NET-Bibliothek für die Interaktion mit Neo4j-Datenbanken. Er ermöglicht Entwicklern, Cypher-Abfragen direkt aus **C#- oder anderen .NET-Sprachen** auszuführen. Der Treiber unterstützt asynchrone und synchrone Kommunikation mit der Datenbank und nutzt das Bolt-Protokoll für schnelle und sichere Verbindungen
 
 ## 1.1. Installation
 
@@ -60,7 +60,7 @@ Der Neo4j .NET Driver ist eine leistungsstarke Möglichkeit, die Flexibilität v
 ## 2.1. Using Neo4j from .NET
 
 | **Vorgabe**             | **Beschreibung**                                                                           |
-| ----------------------- | ------------------------------------------------------------------------------------------ |
+| :---------------------- | :----------------------------------------------------------------------------------------- |
 | **Lernziele**           | Können einen Datenbanktreiber installieren                                                 |
 |                         | Können CRUD Operationen in der gewählten Programmiersprache ausführen                      |
 | **Sozialform**          | Einzelarbeit                                                                               |
