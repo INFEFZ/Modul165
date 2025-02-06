@@ -274,6 +274,8 @@ DROP INDEX personNameIndex
 | **Lösungselmente**      | Grafische Datenmodell als Bild                                                                                         |
 |                         | Vollständige Cypher Skript Datei                                                                                       |
 
+![Technology](./x_gitres/task-neo4j-technology.png)
+
 1. Modellieren Sie mit [arrows.app](https://arrows.app/)  das obige Graph Modell
 2. Erstellen Sie in Neoj4 eine neue Datenbank z.B. Technology
 3. Schreiben Sie die Cypher Befehle und die Knoten aus den obigen Modell einzufügen (CREATE, MERGE)
