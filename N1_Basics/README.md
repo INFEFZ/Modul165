@@ -165,7 +165,7 @@ MATCH (p:Person {name: 'Alice'}) RETURN p
 
 **Aufgabe 1:**
 
-- Starte die Neo4j Desktop Anwendung und öffne im Neo4j Browser die Example Movie Datenbank (Movie DBMS)
+- Starte die **Neo4j Desktop** Anwendung und öffne im Neo4j Browser die Example **Movie Datenbank** (Movie DBMS)
 - Führe den Befehl aus: `neoj4$> match(n) return n`
 - Untersuche das Abfrageresultat (Knoten u. Beziehugnen)
 
@@ -173,5 +173,11 @@ MATCH (p:Person {name: 'Alice'}) RETURN p
 
 **Aufgabe 2:**
 
-- Starte den Befehl: `$ :play movie-graph`
+- Starte den Befehl `:guide intro`
 - Arbeite das Tutorial (Total 8 Punkte) ab.
+
+- Starte den Befehl `:guide concepts`
+- Arbeite das Tutorial (Total 7 Punkte) ab.
+
+- Starte den Befehl: `$ :play movie-graph`
+- Arbeite das Tutorial (Total 10 Punkte) ab.
