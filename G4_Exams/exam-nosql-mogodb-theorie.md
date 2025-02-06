@@ -6,7 +6,7 @@
 
 | **Vorgabe**                 | **Beschreibung**                                                                                              |
 | --------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| **Lernziele**               | LBV 165 -1, Gewichtung 30%                                                                                    |
+| **Lernziele**               | LBV 165 -1, Gewichtung 40%                                                                                    |
 | **Unterlagen**              | keine, closed book                                                                                            |
 | **Zugelassene Hilfsmittel** | Editor, MS-Word, kein Internet                                                                                |
 | **Zeitbedarf**              | 40 min                                                                                                        |
@@ -37,6 +37,6 @@
   
 ---
 
-# 4. Datenmutationsbefehle
+# 4. Datenmanipulationsbefehle
 
 - Einfache Datenmanipulationsbefehle
