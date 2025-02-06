@@ -20,7 +20,7 @@
 - [3. Schema-Management](#3-schema-management)
 - [4. Aufgaben](#4-aufgaben)
   - [4.1. Technology Datenbank modellieren und implementieren](#41-technology-datenbank-modellieren-und-implementieren)
-  - [4.2. Lernangebot atenbank modellieren und implementieren](#42-lernangebot-atenbank-modellieren-und-implementieren)
+  - [4.2. Lernangebot Datenbank modellieren und implementieren](#42-lernangebot-datenbank-modellieren-und-implementieren)
 
 ---
 
@@ -284,7 +284,7 @@ DROP INDEX personNameIndex
 
 ---
 
-## 4.2. Lernangebot atenbank modellieren und implementieren
+## 4.2. Lernangebot Datenbank modellieren und implementieren
 
 | **Vorgabe**             | **Beschreibung**                                                                                                       |
 | :---------------------- | :--------------------------------------------------------------------------------------------------------------------- |
