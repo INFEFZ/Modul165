@@ -10,6 +10,12 @@
 
 ---
 
+- **[Theorie Prüfung NoSQL/MongoDB](../G4_Exams/exam-nosql-mogodb-theorie.md)**
+  - Allg. Fragen zu NoSQL u. MongoDB
+  - Closed book
+
+---
+
 - **[Neo4j Graph Datenbanken](../N1_Basics/README.md)**
   - Einführung
   - Hauptelemente
@@ -18,7 +24,7 @@
 ---
 
 - **[Neo4j Query](../N2_Query/README.md)**
-  - Einführung Cypher-Abfragesprache
+  - Einführung **Cypher**-Abfragesprache
   - Übungsaufgaben
 
 ---
@@ -32,11 +38,11 @@
 
 - **[Neo4j .NET Driver](../N4_Drivers/README.md)**
   - Installation
-  - Beispiele zu CRUD-Operationen
+  - Beispiele zu **CRUD**-Operationen
   - Übungsaufgaben
 
 ---
 
-- **[Kick-Off Praxisarbeit](../G4_Exams/exam-1.md)**
+- **[Kick-Off Praxisarbeit](../G4_Exams//exam-praxis-projekt.md)**
   - Ski-Service Management
   - Organisation u. Abgabetermin
