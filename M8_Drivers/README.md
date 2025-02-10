@@ -42,7 +42,9 @@ Die Installation des .NET Drivers erfolgt über NuGet. Dazu wird das folgende Pa
   - `var collection = database.GetCollection<BsonDocument>("meineSammlung");`
 
 [MongoDB with C#](https://www.mongodb.com/docs/languages/csharp/)
+
 [MongoDB Driver Quick Tour](https://mongodb.github.io/mongo-csharp-driver/2.18/getting_started/quick_tour/)
+
 [Quick Start: C# and MongoDB](https://www.mongodb.com/blog/post/quick-start-c-sharp-and-mongodb-starting-and-setup)
 
 ## 1.4. CRUD Operationen
@@ -120,14 +122,23 @@ collection.DeleteMany(filter);
 | **Lösungselmente**      | Vollständige Skriptdatei mit sämtlichen Lösungsdateien                |
 |                         | Kurzpräsentation der Lösung                                           |
 
-Lerne wie Datenbankbefehle (CRUD) in Deiner bevorzugten Sprache mit dem zugehörigen MongoDB-Treiber ausführt werden können.
+Lerne wie **Datenbankbefehle (CRUD)** in Deiner bevorzugten Sprache mit dem zugehörigen MongoDB-Treiber ausführt werden können.
 
-**Aufgabe 1 - [Tutorial](https://www.mongodb.com/docs/guides/)**
+**Aufgabe 1 - [Quick Start C# and MongoDB](https://www.mongodb.com/blog/post/quick-start-c-sharp-and-mongodb-starting-and-setup)**
 
-Arbeite das Chapter 2 - CRUD des "Start with Guides" Tutorials komplett durch.
+Arbeite das gesamte Tutorial durch:
+
+- Creating Documents
+- Read Operations
+- Update Operations
+- Delete Operations
+
+**Aufgabe 2 - [Tutorial Start with Guides](https://www.mongodb.com/docs/guides/)**
+
+Arbeite das "Chapter 2 - CRUD des "Start with Guides" Tutorials komplett durch.
 Wählen Sie dabei die Programmiersprache "C#", sodass die Codebeispiele in dieser Sprache angezeigt werden.
 
-**Aufgabe 2 - Praxis:**
+**Aufgabe 3 - Praxis:**
 
-Schreibe ein kleines C#-Programm, welches auf eine von Dir selbst erstellte Datenbank (z.B. Lernangebot) zugreift und mehrere CRUD-Befehle ausführt.
+Schreibe ein kleines **C#-Programm**, welches auf eine von Dir selbst erstellte Datenbank (z.B. Lernangebot) zugreift und mehrere CRUD-Befehle ausführt.
 Dokumentiere im Programmcode die Datenbankbefehle ausführlich (XML-Kommentare) als Befehlsreferenz.
