@@ -77,8 +77,8 @@ Lerne wie Datenbankbefehle (CRUD) in Deiner bevorzugten Sprache mit dem zugehör
 Rufe den Link zur offiziellen Neo4j Treiber auf und lese, wie der .NET Treiber in einem .NET-Projekt installiert und konfiguriert werden kann.
 Erstelle ein neues Konsolen-Projekt, füge diesem die Klasse HelloWorldExample hinzu und versuche einen Greeting Node einzufügen.
 
-- [getting-started](https://neo4j.com/docs/getting-started/languages-guides/neo4j-dotnet/)
-- [dotnet-manual](https://neo4j.com/docs/dotnet-manual/current/get-started/)
+- [The Neo4j .NET Driver Manual](https://neo4j.com/docs/dotnet-manual/current/)
+- [Get started](https://neo4j.com/docs/dotnet-manual/current/get-started/)
 
 **Aufgabe 2 - Example Project:**
 
