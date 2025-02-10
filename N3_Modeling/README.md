@@ -47,7 +47,7 @@ Zunächst analysierst du die Problemstellung und identifizierst:
 
 **Erstellen des Graphmodells:**
 
-Das Modell wird mit Knoten, Labels, Beziehungen und Eigenschaften gezeichnet. 
+Das Modell wird mit Knoten, Labels, Beziehungen und Eigenschaften gezeichnet.
 Dabei gilt:
 
 - Knoten repräsentieren Entitäten.

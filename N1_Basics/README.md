@@ -31,6 +31,8 @@ Hauptvorteile sind die **einfache Modellierung** von Daten, **schnelle Abfragen*
 
 ![Überblick](./x_gitres/neo4j-overview.jpg)
 
+[Neo4j in 100 Seconds](https://www.youtube.com/watch?v=T6L9EoBy8Zk)
+
 Konzept
 
 - Die Architektur ist auf eine optimale Verwaltung, Speicherung und Durchquerung von Knoten und Beziehungen ausgelegt.
