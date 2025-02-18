@@ -260,7 +260,7 @@ Beim Referencing werden Daten in separaten Dokumenten gespeichert und durch Refe
 | **Zeitbedarf**          | 30 min                                                        |
 | **Lösungselmente**      | Markdown Dokument                                             |
 
-MongoDB stellt für die **CURD-Befehle** entsprechende **Methoden** (Operations) zur Verfügung.
+MongoDB stellt für die **CRUD-Befehle** entsprechende **Methoden** (Operations) zur Verfügung.
 Arbeite im nachfolgenden Tutorial [Run Commands](https://www.mongodb.com/docs/mongodb-shell/run-commands/) die folgenden Kapitel durch:
 
 - **Run Commands**
