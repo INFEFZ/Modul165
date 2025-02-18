@@ -188,7 +188,7 @@ Um Redundanzen auszuschliessen, müssen die Daten bis zur dritten Normalform (3.
 - MS SQL Server Installation
 - SQL Server Management Studio
 
-**Vorgehen:**
+**Aufgabe 1 (Praxis, Normalisierung, Implementierung):**
 
 1. Normalisiere die Schulverwaltungsdaten bis zur **3. NF** und stelle diese in Excel dar.
    1. Lösungselement: **Excel-Datei**.
@@ -200,7 +200,8 @@ Um Redundanzen auszuschliessen, müssen die Daten bis zur dritten Normalform (3.
 4. Prüfe nun mit mehreren **SQL-Abfragen** (Join) ob alle Daten korrekt eingetragen sind.
    1. Lösungselement: SQL-Datei (`sv-query-data.sql`)
 
-Aufgabe 2: Theorie, **Transaktionen**
+**Aufgabe 2 (Theorie, Transaktionen):**
+
 Erstelle zu folgenden Themen eine Kurzpräsentation:
 
 1. Wofür werden **SQL-Transaktionen** benötigt (Sinn u. Zweck)?
