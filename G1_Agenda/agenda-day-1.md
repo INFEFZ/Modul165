@@ -11,7 +11,8 @@
     - [Modulidentifikation](https://www.modulbaukasten.ch/module/165/1/de-DE?title=NoSQL-Datenbanken-einsetzen)
   - [Themen-Input](./topic-input.md)
   - Prüfungen
-    - [Projektarbeit](../G4_Exams/exam-1.md)
+    - [Theorie NoSQL u. MongoDB](../G4_Exams/exam-nosql-mogodb-theorie.md)
+    - [Projektarbeit](../G4_Exams/exam-praxis-projekt.md)
 
 ---
 
