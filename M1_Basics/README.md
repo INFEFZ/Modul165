@@ -272,17 +272,17 @@ Fasse die **Run-Commands** und die **CRUD-Befehle** in einem Markdown Dokument z
 
 ## 2.2. Get Started with Altlas
 
-| **Vorgabe**         | **Beschreibung**                                            |
-| :------------------ | :---------------------------------------------------------- |
-| Lernziele           | Können einen Atlas-Cluster Zugang einrichten                |
-|                     | Können den Zugriff zum Cluster von lokalen Tools einrichten |
-|                     | Können in der MongoDB Shell Befehle ausführen               |
-| Sozialform          | Einzelarbeit                                                |
-| Auftrag             | siehe unten                                                 |
-| Hilfsmittel         | Internet                                                    |
-| Erwartete Resultate |                                                             |
-| Zeitbedarf          | 40 min                                                      |
-| Lösungselmente      | Atlas Account eingerichtet, Verbindungszeichenfolge         |
+| **Vorgabe**             | **Beschreibung**                                            |
+| :---------------------- | :---------------------------------------------------------- |
+| **Lernziele**           | Können einen Atlas-Cluster Zugang einrichten                |
+|                         | Können den Zugriff zum Cluster von lokalen Tools einrichten |
+|                         | Können in der MongoDB Shell Befehle ausführen               |
+| **Sozialform**          | Einzelarbeit                                                |
+| **Auftrag**             | siehe unten                                                 |
+| **Hilfsmittel**         | Internet                                                    |
+| **Erwartete Resultate** |                                                             |
+| **Zeitbedarf**          | 40 min                                                      |
+| **Lösungselmente**      | Atlas Account eingerichtet, Verbindungszeichenfolge         |
 
 **MongoDB Atlas** bietet eine einfache Möglichkeit, Ihre Daten in der Cloud zu hosten und zu verwalten.
 
