@@ -248,23 +248,25 @@ Beim Referencing werden Daten in separaten Dokumenten gespeichert und durch Refe
 
 ## 2.1. MongoDB Shell Einführung
 
-| **Vorgabe**             | **Beschreibung**                                              |
-| :---------------------- | :------------------------------------------------------------ |
-| **Lernziele**           | Kennt einfache Basiselemente einer MongoDB Datenbank          |
-|                         | Kennt die Möglichkeiten Datenbanken und Collections anzulegen |
-|                         | Kennt die einfache Abfragebefehle                             |
-| **Sozialform**          | Einzelarbeit                                                  |
-| **Auftrag**             | siehe unten                                                   |
-| **Hilfsmittel**         | [Internet](https://www.mongodb.com/docs/manual/crud/)         |
-| **Erwartete Resultate** |                                                               |
-| **Zeitbedarf**          | 30 min                                                        |
-| **Lösungselmente**      | Markdown Dokument                                             |
+| **Vorgabe**             | **Beschreibung**                                                      |
+| :---------------------- | :-------------------------------------------------------------------- |
+| **Lernziele**           | Kennt einfache Basiselemente einer MongoDB Datenbank                  |
+|                         | Kennt die Möglichkeiten **Datenbanken** und **Collections** anzulegen |
+|                         | Kennt die einfache Abfragebefehle                                     |
+| **Sozialform**          | Einzelarbeit                                                          |
+| **Auftrag**             | siehe unten                                                           |
+| **Hilfsmittel**         | [Internet](https://www.mongodb.com/docs/manual/crud/)                 |
+| **Erwartete Resultate** |                                                                       |
+| **Zeitbedarf**          | 30 min                                                                |
+| **Lösungselmente**      | Markdown Dokument                                                     |
 
 MongoDB stellt für die **CRUD-Befehle** entsprechende **Methoden** (Operations) zur Verfügung.
 Arbeite im nachfolgenden Tutorial [Run Commands](https://www.mongodb.com/docs/mongodb-shell/run-commands/) die folgenden Kapitel durch:
 
 - **Run Commands**
 - **Perform CRUD Operations**
+
+Fasse die **Run-Commands** und die **CRUD-Befehle** in einem Markdown Dokument zusammen.
 
 ---
 
