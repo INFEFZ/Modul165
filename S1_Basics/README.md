@@ -193,16 +193,19 @@ Um Redundanzen auszuschliessen, müssen die Daten bis zur dritten Normalform (3.
 1. Normalisiere die Schulverwaltungsdaten bis zur **3. NF** und stelle diese in Excel dar.
    1. Lösungselement: **Excel-Datei**.
 2. Erstelle eine neue SQL-Datenbank (MS SQL-Server) und schreibe in **SQL alle Datenbankbefehle** um die Tabellen (Schema) zu erstellen.
-   1. Beachte dabei auch die Primärschlüssel (PK) und Fremdschlüssel (FK) festzulegen. Lösungselement: SQL-Datei (sv-create-schema.sql)
+   1. Beachte dabei auch die **Primärschlüssel (PK)** und **Fremdschlüssel (FK)** festzulegen. 
+   2. Lösungselement: SQL-Datei (`sv-create-schema.sql`)
 3. Füge nun mit **SQL-Befehlen** (insert into) die aufgeführten Daten in die Tabellen ein.
-   1. Lösungselement: SQL-Datei (sv-insert-data.sql)
+   1. Lösungselement: SQL-Datei (`sv-insert-data.sql`)
 4. Prüfe nun mit mehreren **SQL-Abfragen** (Join) ob alle Daten korrekt eingetragen sind.
-   1. Lösungselement: SQL-Datei (sv-query-data.sql)
-5. Aufgabe 2: Theorie, **Transaktionen**
-   1. Erstelle zu folgenden Themen eine Kurzpräsentation:
-   2. Wofür werden SQL-Transaktionen benötigt (Sinn u. Zweck)?
-   3. Was bedeutet ACID?
-   4. Wie werden Transaktionen in SQL umgesetzt (Beispiel Befehle)
+   1. Lösungselement: SQL-Datei (`sv-query-data.sql`)
+
+Aufgabe 2: Theorie, **Transaktionen**
+Erstelle zu folgenden Themen eine Kurzpräsentation:
+
+1. Wofür werden **SQL-Transaktionen** benötigt (Sinn u. Zweck)?
+2. Was bedeutet **ACID**?
+3. Wie werden Transaktionen in **SQL** umgesetzt (Beispiel Befehle)
 
 ---
 
