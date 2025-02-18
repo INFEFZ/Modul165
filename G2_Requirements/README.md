@@ -102,7 +102,7 @@ Eine **Graphdatenbank** ist eine Datenbank, die Graphen benutzt, um stark vernet
 # 3. Aufgabe - Installation u. Softwarevoraussetzungen / Tools
 
 | **Vorgabe**             | **Beschreibung**                     |
-| ----------------------- | ------------------------------------ |
+| :---------------------- | :----------------------------------- |
 | **Lernziele**           | Softwarevoraussetzungen sind erfüllt |
 | **Sozialform**          | Einzelarbeit                         |
 | **Auftrag**             | Softwareinstallationen auf Laptop    |
