@@ -361,7 +361,7 @@ Recherchiere die der Gruppe zugeteilten Methoden und erstelle eine kurze Befehls
 
 1. Für eine Uni-Vergleichs-Webseite möchten wir alle **Universitäten** in der Schweiz erfassen
 2. Erstelle hierfür zuerst eine neue **Datenbank** (`uni`).
-3. Lege dazu eine **Collection** an, und speichere dort (erstmal) 3-5 Universitäten mit Name (`name`) und Stadt (`city`)
+3. Lege dazu eine **Collection** (`universities`) an, und speichere dort (erstmal) 3-5 Universitäten mit Name (`name`) und Stadt (`city`)
 4. Wie geben wir eine Liste aller Universitäten aus?
 5. Wie greifst du auf eine einzelne Uni zu (per `ID`)?
 6. Wie können wir uns alle Universitäten aus einer bestimmten Stadt ausgeben lassen?
