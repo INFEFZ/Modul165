@@ -22,7 +22,7 @@
   - [1.10. Gesamtübersicht](#110-gesamtübersicht)
 - [2. Aufgaben](#2-aufgaben)
   - [2.1. MongoDB Shell Einführung](#21-mongodb-shell-einführung)
-  - [2.2. Get Started with Altlas](#22-get-started-with-altlas)
+  - [2.2. Get Started with Atlas](#22-get-started-with-atlas)
 
 ---
 
@@ -270,7 +270,7 @@ Fasse die **Run-Commands** und die **CRUD-Befehle** in einem Markdown Dokument z
 
 ---
 
-## 2.2. Get Started with Altlas
+## 2.2. Get Started with Atlas
 
 | **Vorgabe**             | **Beschreibung**                                            |
 | :---------------------- | :---------------------------------------------------------- |
