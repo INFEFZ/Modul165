@@ -255,7 +255,8 @@ Führe eine MongoDB Migration durch. Verwende dabei eine **Embedded** Datenstruk
 - **Lösungselemente:**
   - MongoDB Insert-Skript-Datei
 
-Indexiere min. 2 Nichtschlüssel-Elemente (z.B. name, band_name), sodass die Suchabfragen beschleunigt werden.
+**Aufgabe 3:**
+Indexiere min. 2 Nichtschlüssel-Elemente (z.B. `name`, `band_name`), sodass die Suchabfragen beschleunigt werden.
 
 - **Lösungselemente:**
   - MongoDB Create-Index-Skript-Datei
