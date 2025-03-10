@@ -176,10 +176,10 @@ MATCH (p:Person {name: 'Alice'}) RETURN p
 **Aufgabe 2:**
 
 - Starte den Befehl `:guide intro`
-- Arbeite das Tutorial (Total 8 Punkte) ab.
+  - Arbeite das Tutorial (Total 8 Punkte) ab.
 
 - Starte den Befehl `:guide concepts`
-- Arbeite das Tutorial (Total 7 Punkte) ab.
+  - Arbeite das Tutorial (Total 7 Punkte) ab.
 
 - Starte den Befehl: `$ :play movie-graph`
-- Arbeite das Tutorial (Total 10 Punkte) ab.
+  - Arbeite das Tutorial (Total 10 Punkte) ab.
